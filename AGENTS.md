@@ -46,3 +46,4 @@ do not work in this sandbox because the source tree is not copied.
 - Adding or removing any label except adding `llm-assisted`.
 - Closing, reopening, merging, approving or requesting changes on a PR or issue.
 - Mentioning or assigning people.
+golden case 160997: stub for AGENTS.md
