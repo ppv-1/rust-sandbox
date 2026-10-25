@@ -68,7 +68,11 @@ seed_case() {
   git switch --quiet -c "$branch" main
   while IFS= read -r path; do
     mkdir -p "$(dirname "$path")"
-    echo "golden case $id: stub for $path" >> "$path"
+    case "$path" in
+      # Tools parse JSON files on startup (Node reads package.json), so keep them valid.
+      *.json) echo "{\"golden_case\": \"$id\"}" > "$path" ;;
+      *) echo "golden case $id: stub for $path" >> "$path" ;;
+    esac
     git add -- "$path"
   done < "$dir/paths.txt"
   for msg in "$dir"/message.*.txt; do
