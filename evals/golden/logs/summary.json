@@ -1,0 +1,3705 @@
+{
+  "summary": {
+    "executed_runs": 10,
+    "executed_success_runs": 10,
+    "total_runs": 10,
+    "total_duration": "1.0h",
+    "total_aic": 17.792199999999998,
+    "total_tokens": 56310,
+    "total_action_minutes": 66,
+    "total_turns": 10,
+    "total_errors": 0,
+    "total_warnings": 0,
+    "total_missing_tools": 0,
+    "total_missing_data": 0,
+    "total_safe_items": 4,
+    "total_driver_exit_failures": 0,
+    "total_agent_logic_failures": 0,
+    "total_episodes": 0,
+    "high_confidence_episodes": 0,
+    "total_github_api_calls": 212,
+    "engine_counts": {
+      "copilot": 10
+    }
+  },
+  "runs": [
+    {
+      "job_count": 6,
+      "run_id": 40224824715,
+      "number": 13,
+      "workflow_name": "LLM-policy triage",
+      "workflow_path": ".github/workflows/llm-triage.lock.yml",
+      "agent": "copilot",
+      "engine": "GitHub Copilot CLI",
+      "engine_id": "copilot",
+      "model": "gpt-4.1",
+      "requested_model": "gpt-4.1",
+      "status": "completed",
+      "conclusion": "success",
+      "classification": "normal",
+      "duration": "6.5m",
+      "action_minutes": 7,
+      "token_usage": 17468,
+      "aic": 4.4718,
+      "ambient_context": {
+        "input_tokens": 17102,
+        "cached_tokens": 0
+      },
+      "working_set": {
+        "measurement_state": "measured",
+        "rebuild_factor": 1.0096479943866215,
+        "cumulative_input_tokens": 17267,
+        "peak_input_tokens": 17102,
+        "rebuild_excess_tokens": 165,
+        "invocations": 2
+      },
+      "ledger": {
+        "transactions_added": 0
+      },
+      "friction": {
+        "measurement_state": "measured",
+        "canonical_unit": "aic",
+        "sources": [
+          "agent_session",
+          "agent_token_usage",
+          "firewall",
+          "mcp_gateway"
+        ],
+        "total_events": 0,
+        "total_occurrences": 0,
+        "counted_occurrences": 0,
+        "suppressed_occurrences": 0,
+        "cost": {
+          "aic": 0,
+          "tokens": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0,
+            "cache_write": 0,
+            "reasoning": 0,
+            "total": 0
+          },
+          "turns": 0,
+          "tool_calls": 0,
+          "latency_ms": 0
+        },
+        "total_run_aic": 4.4718,
+        "friction_ratio": 0,
+        "dimension_states": {
+          "aic": "measured",
+          "latency_ms": "measured",
+          "tokens": "measured",
+          "tool_calls": "measured",
+          "turns": "measured"
+        },
+        "uncertainty": {
+          "aic": {
+            "state": "measured",
+            "method": "direct_record",
+            "confidence": "high",
+            "relative_error": 0,
+            "lower_bound": 0,
+            "upper_bound": 0,
+            "sample_size": 2,
+            "basis": "AI credits of errored invocations (measured), of linked follow-up invocations (causal), or the mean healthy-invocation cost (statistical)"
+          },
+          "latency_ms": {
+            "state": "measured",
+            "method": "direct_record",
+            "confidence": "high",
+            "relative_error": 0,
+            "lower_bound": 0,
+            "upper_bound": 0,
+            "basis": "wall-clock duration recorded on the failing tool call or invocation"
+          },
+          "tokens": {
+            "state": "measured",
+            "method": "direct_record",
+            "confidence": "high",
+            "relative_error": 0,
+            "lower_bound": 0,
+            "upper_bound": 0,
+            "sample_size": 2,
+            "basis": "token classes of the attributed invocations"
+          },
+          "tool_calls": {
+            "state": "measured",
+            "method": "direct_record",
+            "confidence": "high",
+            "relative_error": 0,
+            "lower_bound": 0,
+            "upper_bound": 0,
+            "basis": "counted friction occurrences that consumed a tool call"
+          },
+          "turns": {
+            "state": "measured",
+            "method": "direct_record",
+            "confidence": "high",
+            "relative_error": 0,
+            "lower_bound": 0,
+            "upper_bound": 0,
+            "basis": "one additional turn per errored or retried model invocation"
+          }
+        },
+        "unmeasured_drivers": [
+          {
+            "driver": "agent_api_error",
+            "reason": "no_occurrences"
+          },
+          {
+            "driver": "firewall_block",
+            "reason": "no_occurrences"
+          },
+          {
+            "driver": "integrity_filter",
+            "reason": "no_occurrences"
+          },
+          {
+            "driver": "mcp_tool_error",
+            "reason": "no_occurrences"
+          },
+          {
+            "driver": "session_tool_failure",
+            "reason": "no_occurrences"
+          }
+        ]
+      },
+      "turns": 1,
+      "safe_items_count": 2,
+      "created_at": "2026-10-25T19:11:19Z",
+      "started_at": "2026-10-26T05:43:01Z",
+      "updated_at": "2026-10-26T05:49:30Z",
+      "url": "https://github.com/ppv-1/rust-sandbox/actions/runs/40224824715",
+      "logs_path": "evals\\golden\\logs\\run-40224824715",
+      "event": "pull_request",
+      "branch": "golden/161714",
+      "head_sha": "94aafad6fe8394c4f4e70eef198ba194bf26e173",
+      "display_title": "LLM-policy triage",
+      "repository": "ppv-1/rust-sandbox",
+      "organization": "ppv-1",
+      "ref": "refs/pull/17/merge",
+      "sha": "4a0a647f3f3e6812d4ed798831f3eb0518eaac39",
+      "actor": "ppv-1",
+      "run_attempt": "2",
+      "event_name": "pull_request",
+      "comparison": {
+        "baseline_found": true,
+        "baseline": {
+          "run_id": 40221124057,
+          "workflow_name": "LLM-policy triage",
+          "conclusion": "success",
+          "created_at": "2026-10-25T18:24:50Z",
+          "selection": "cohort_match",
+          "matched_on": [
+            "event",
+            "task_domain",
+            "execution_style",
+            "resource_profile",
+            "actuation_style",
+            "dispatch_mode",
+            "tool_breadth"
+          ]
+        },
+        "delta": {
+          "turns": {
+            "before": 1,
+            "after": 1,
+            "changed": false
+          },
+          "posture": {
+            "before": "write_capable",
+            "after": "write_capable",
+            "changed": false
+          },
+          "blocked_requests": {
+            "before": 0,
+            "after": 0,
+            "changed": false
+          }
+        },
+        "classification": {
+          "label": "stable"
+        },
+        "recommendation": {
+          "action": "No action needed; this run matches the selected successful baseline closely."
+        }
+      },
+      "task_domain": {
+        "name": "triage",
+        "label": "Triage",
+        "reason": "The run focused on classification, routing, or issue state updates."
+      },
+      "behavior_fingerprint": {
+        "execution_style": "directed",
+        "tool_breadth": "narrow",
+        "actuation_style": "selective_write",
+        "resource_profile": "moderate",
+        "dispatch_mode": "standalone",
+        "agentic_fraction": 1
+      },
+      "agentic_assessments": [
+        {
+          "kind": "model_downgrade_available",
+          "severity": "low",
+          "summary": "This Triage run may not need a frontier model. A smaller model (e.g. gpt-4.1-mini, claude-haiku-4-5) could handle the task at lower cost.",
+          "evidence": "domain=triage resource_profile=moderate actuation=selective_write",
+          "recommendation": "Try engine.model: gpt-4.1-mini or claude-haiku-4-5 in the workflow frontmatter."
+        }
+      ],
+      "token_usage_summary": {
+        "total_input_tokens": 17267,
+        "total_output_tokens": 201,
+        "total_cache_read_tokens": 17152,
+        "total_cache_write_tokens": 0,
+        "total_requests": 2,
+        "total_duration_ms": 57425,
+        "total_response_bytes": 44580,
+        "cache_efficiency": 0,
+        "total_aic": 4.4718,
+        "ambient_context": {
+          "input_tokens": 17102,
+          "cached_tokens": 0
+        },
+        "by_model": {
+          "gpt-4.1-2025-04-14": {
+            "provider": "copilot",
+            "input_tokens": 17267,
+            "output_tokens": 201,
+            "cache_read_tokens": 17152,
+            "cache_write_tokens": 0,
+            "requests": 2,
+            "duration_ms": 57425,
+            "response_bytes": 44580,
+            "aic": 4.4718
+          }
+        },
+        "agent_usage": [
+          {
+            "agent_name": "main",
+            "agent_type": "main",
+            "source_engine": "copilot",
+            "instance_count": 1,
+            "served_models": [
+              "gpt-4.1",
+              "gpt-4.1-2025-04-14"
+            ],
+            "requests": 2,
+            "input_tokens": 34419,
+            "output_tokens": 201,
+            "cache_read_tokens": 17152,
+            "cache_write_tokens": 0,
+            "total_api_duration_ms": 57449,
+            "models": [
+              {
+                "model": "gpt-4.1",
+                "resolved_model": "gpt-4.1",
+                "requests": 2,
+                "input_tokens": 34419,
+                "output_tokens": 201,
+                "cache_read_tokens": 17152,
+                "cache_write_tokens": 0
+              }
+            ]
+          }
+        ]
+      },
+      "github_api_calls": 36,
+      "graders": {
+        "version": 2,
+        "results": [
+          {
+            "id": "artifact-production",
+            "name": "Artifact Production",
+            "status": "pass",
+            "value": 2,
+            "unit": "count",
+            "direction": "higher_is_better"
+          },
+          {
+            "id": "context-growth",
+            "name": "Context Growth",
+            "status": "pass",
+            "value": 1.0114649681528662,
+            "unit": "factor",
+            "direction": "lower_is_better"
+          },
+          {
+            "id": "execution-duration",
+            "name": "Execution Duration",
+            "status": "pass",
+            "value": 57425,
+            "unit": "ms",
+            "direction": "lower_is_better"
+          },
+          {
+            "id": "execution-step-count",
+            "name": "Execution Step Count",
+            "status": "pass",
+            "value": 2,
+            "unit": "count",
+            "direction": "lower_is_better"
+          },
+          {
+            "id": "loops",
+            "name": "Loops",
+            "status": "pass",
+            "value": 0,
+            "unit": "count",
+            "passed": true,
+            "direction": "lower_is_better",
+            "threshold": 3
+          },
+          {
+            "id": "retries",
+            "name": "Retries",
+            "status": "pass",
+            "value": 0,
+            "unit": "count",
+            "passed": true,
+            "direction": "lower_is_better",
+            "threshold": 10
+          },
+          {
+            "id": "tool-failure-count",
+            "name": "Tool Failure Count",
+            "status": "pass",
+            "value": 2,
+            "unit": "count",
+            "passed": true,
+            "direction": "lower_is_better",
+            "threshold": 5
+          },
+          {
+            "id": "tool-success-rate",
+            "name": "Tool Success Rate",
+            "status": "fail",
+            "value": 0.5,
+            "unit": "ratio",
+            "passed": false,
+            "direction": "higher_is_better",
+            "threshold": 0.8
+          },
+          {
+            "id": "trajectory-efficiency",
+            "name": "Trajectory Efficiency",
+            "status": "pass",
+            "value": 1,
+            "unit": "ratio",
+            "direction": "higher_is_better"
+          },
+          {
+            "id": "working-set-rebuild-factor",
+            "name": "Working-Set Rebuild Factor",
+            "status": "pass",
+            "value": 1.0096479943866215,
+            "unit": "factor",
+            "direction": "lower_is_better"
+          }
+        ],
+        "total": 10,
+        "passed": 9,
+        "failed": 1,
+        "error_count": 0,
+        "unavailable_count": 0
+      },
+      "safe_outputs": [
+        {
+          "type": "add_labels",
+          "number": 17,
+          "repo": "ppv-1/rust-sandbox",
+          "provider": "github",
+          "target": {
+            "kind": "pull request",
+            "number": 17,
+            "provider": "github",
+            "repository": "ppv-1/rust-sandbox"
+          },
+          "labels": [
+            {
+              "name": "llm-assisted",
+              "database_id": 12832536851,
+              "node_id": "LA_kwDOVVzeqM8AAAAC_OD5Ew"
+            }
+          ],
+          "labelsAdded": [
+            "llm-assisted"
+          ],
+          "before_state": {
+            "assignees": [],
+            "body_hash": "f695bd09fde6dfcad3ef611b6e0f37ae3c569ddc96513d0ae3dc99e61c5d391f",
+            "labels": [],
+            "state": "open",
+            "title": "fix: upgrade brace-expansion to 1.1.18, 2.1.4, 3.0.6, 5.0.9 (CVE-2026-69152)"
+          },
+          "after_state": {
+            "assignees": [],
+            "body_hash": "f695bd09fde6dfcad3ef611b6e0f37ae3c569ddc96513d0ae3dc99e61c5d391f",
+            "labels": [
+              "llm-assisted"
+            ],
+            "state": "open",
+            "title": "fix: upgrade brace-expansion to 1.1.18, 2.1.4, 3.0.6, 5.0.9 (CVE-2026-69152)"
+          },
+          "timestamp": "2026-10-26T05:49:06.371Z"
+        },
+        {
+          "type": "add_comment",
+          "url": "https://github.com/ppv-1/rust-sandbox/pull/17#issuecomment-6409196722",
+          "number": 17,
+          "repo": "ppv-1/rust-sandbox",
+          "provider": "github",
+          "id": 6409196722,
+          "target": {
+            "number": 17,
+            "provider": "github",
+            "repository": "ppv-1/rust-sandbox"
+          },
+          "timestamp": "2026-10-26T05:49:07.875Z"
+        }
+      ],
+      "download_duration_ms": 3348,
+      "download_size_bytes": 255747
+    },
+    {
+      "job_count": 6,
+      "run_id": 40221124057,
+      "number": 12,
+      "workflow_name": "LLM-policy triage",
+      "workflow_path": ".github/workflows/llm-triage.lock.yml",
+      "agent": "copilot",
+      "engine": "GitHub Copilot CLI",
+      "engine_id": "copilot",
+      "model": "gpt-4.1",
+      "requested_model": "gpt-4.1",
+      "status": "completed",
+      "conclusion": "success",
+      "classification": "normal",
+      "duration": "6.3m",
+      "action_minutes": 7,
+      "token_usage": 12597,
+      "aic": 3.7838,
+      "ambient_context": {
+        "input_tokens": 12111,
+        "cached_tokens": 4992
+      },
+      "working_set": {
+        "measurement_state": "measured",
+        "rebuild_factor": 1.01849558252828,
+        "cumulative_input_tokens": 12335,
+        "peak_input_tokens": 12111,
+        "rebuild_excess_tokens": 224,
+        "invocations": 2
+      },
+      "ledger": {
+        "transactions_added": 0
+      },
+      "friction": {
+        "measurement_state": "measured",
+        "canonical_unit": "aic",
+        "sources": [
+          "agent_session",
+          "agent_token_usage",
+          "firewall",
+          "mcp_gateway"
+        ],
+        "total_events": 0,
+        "total_occurrences": 0,
+        "counted_occurrences": 0,
+        "suppressed_occurrences": 0,
+        "cost": {
+          "aic": 0,
+          "tokens": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0,
+            "cache_write": 0,
+            "reasoning": 0,
+            "total": 0
+          },
+          "turns": 0,
+          "tool_calls": 0,
+          "latency_ms": 0
+        },
+        "total_run_aic": 3.7838000000000003,
+        "friction_ratio": 0,
+        "dimension_states": {
+          "aic": "measured",
+          "latency_ms": "measured",
+          "tokens": "measured",
+          "tool_calls": "measured",
+          "turns": "measured"
+        },
+        "uncertainty": {
+          "aic": {
+            "state": "measured",
+            "method": "direct_record",
+            "confidence": "high",
+            "relative_error": 0,
+            "lower_bound": 0,
+            "upper_bound": 0,
+            "sample_size": 2,
+            "basis": "AI credits of errored invocations (measured), of linked follow-up invocations (causal), or the mean healthy-invocation cost (statistical)"
+          },
+          "latency_ms": {
+            "state": "measured",
+            "method": "direct_record",
+            "confidence": "high",
+            "relative_error": 0,
+            "lower_bound": 0,
+            "upper_bound": 0,
+            "basis": "wall-clock duration recorded on the failing tool call or invocation"
+          },
+          "tokens": {
+            "state": "measured",
+            "method": "direct_record",
+            "confidence": "high",
+            "relative_error": 0,
+            "lower_bound": 0,
+            "upper_bound": 0,
+            "sample_size": 2,
+            "basis": "token classes of the attributed invocations"
+          },
+          "tool_calls": {
+            "state": "measured",
+            "method": "direct_record",
+            "confidence": "high",
+            "relative_error": 0,
+            "lower_bound": 0,
+            "upper_bound": 0,
+            "basis": "counted friction occurrences that consumed a tool call"
+          },
+          "turns": {
+            "state": "measured",
+            "method": "direct_record",
+            "confidence": "high",
+            "relative_error": 0,
+            "lower_bound": 0,
+            "upper_bound": 0,
+            "basis": "one additional turn per errored or retried model invocation"
+          }
+        },
+        "unmeasured_drivers": [
+          {
+            "driver": "agent_api_error",
+            "reason": "no_occurrences"
+          },
+          {
+            "driver": "firewall_block",
+            "reason": "no_occurrences"
+          },
+          {
+            "driver": "integrity_filter",
+            "reason": "no_occurrences"
+          },
+          {
+            "driver": "mcp_tool_error",
+            "reason": "no_occurrences"
+          },
+          {
+            "driver": "session_tool_failure",
+            "reason": "no_occurrences"
+          }
+        ]
+      },
+      "turns": 1,
+      "safe_items_count": 1,
+      "created_at": "2026-10-25T18:24:50Z",
+      "started_at": "2026-10-25T18:48:11Z",
+      "updated_at": "2026-10-25T18:54:31Z",
+      "url": "https://github.com/ppv-1/rust-sandbox/actions/runs/40221124057",
+      "logs_path": "evals\\golden\\logs\\run-40221124057",
+      "event": "pull_request",
+      "branch": "golden/A1",
+      "head_sha": "301cdb7e1932a160e6efbe50c78c8760e5092236",
+      "display_title": "LLM-policy triage",
+      "repository": "ppv-1/rust-sandbox",
+      "organization": "ppv-1",
+      "ref": "refs/pull/12/merge",
+      "sha": "4c352dcb20dbe101efdaeb2eefe6baf6fdc0a1c5",
+      "actor": "ppv-1",
+      "run_attempt": "2",
+      "event_name": "pull_request",
+      "comparison": {
+        "baseline_found": true,
+        "baseline": {
+          "run_id": 40221117621,
+          "workflow_name": "LLM-policy triage",
+          "conclusion": "success",
+          "created_at": "2026-10-25T18:24:45Z",
+          "selection": "cohort_match",
+          "matched_on": [
+            "event",
+            "task_domain",
+            "execution_style",
+            "resource_profile",
+            "actuation_style",
+            "dispatch_mode",
+            "tool_breadth"
+          ]
+        },
+        "delta": {
+          "turns": {
+            "before": 1,
+            "after": 1,
+            "changed": false
+          },
+          "posture": {
+            "before": "write_capable",
+            "after": "write_capable",
+            "changed": false
+          },
+          "blocked_requests": {
+            "before": 0,
+            "after": 0,
+            "changed": false
+          }
+        },
+        "classification": {
+          "label": "stable"
+        },
+        "recommendation": {
+          "action": "No action needed; this run matches the selected successful baseline closely."
+        }
+      },
+      "task_domain": {
+        "name": "triage",
+        "label": "Triage",
+        "reason": "The run focused on classification, routing, or issue state updates."
+      },
+      "behavior_fingerprint": {
+        "execution_style": "directed",
+        "tool_breadth": "narrow",
+        "actuation_style": "selective_write",
+        "resource_profile": "moderate",
+        "dispatch_mode": "standalone",
+        "agentic_fraction": 1
+      },
+      "agentic_assessments": [
+        {
+          "kind": "model_downgrade_available",
+          "severity": "low",
+          "summary": "This Triage run may not need a frontier model. A smaller model (e.g. gpt-4.1-mini, claude-haiku-4-5) could handle the task at lower cost.",
+          "evidence": "domain=triage resource_profile=moderate actuation=selective_write",
+          "recommendation": "Try engine.model: gpt-4.1-mini or claude-haiku-4-5 in the workflow frontmatter."
+        }
+      ],
+      "token_usage_summary": {
+        "total_input_tokens": 12335,
+        "total_output_tokens": 262,
+        "total_cache_read_tokens": 22144,
+        "total_cache_write_tokens": 0,
+        "total_requests": 2,
+        "total_duration_ms": 32333,
+        "total_response_bytes": 60106,
+        "cache_efficiency": 0,
+        "total_aic": 3.7838,
+        "ambient_context": {
+          "input_tokens": 12111,
+          "cached_tokens": 4992
+        },
+        "by_model": {
+          "gpt-4.1-2025-04-14": {
+            "provider": "copilot",
+            "input_tokens": 12335,
+            "output_tokens": 262,
+            "cache_read_tokens": 22144,
+            "cache_write_tokens": 0,
+            "requests": 2,
+            "duration_ms": 32333,
+            "response_bytes": 60106,
+            "aic": 3.7838000000000003
+          }
+        },
+        "agent_usage": [
+          {
+            "agent_name": "main",
+            "agent_type": "main",
+            "source_engine": "copilot",
+            "instance_count": 1,
+            "served_models": [
+              "gpt-4.1",
+              "gpt-4.1-2025-04-14"
+            ],
+            "requests": 2,
+            "input_tokens": 34479,
+            "output_tokens": 262,
+            "cache_read_tokens": 22144,
+            "cache_write_tokens": 0,
+            "total_api_duration_ms": 32359,
+            "models": [
+              {
+                "model": "gpt-4.1",
+                "resolved_model": "gpt-4.1",
+                "requests": 2,
+                "input_tokens": 34479,
+                "output_tokens": 262,
+                "cache_read_tokens": 22144,
+                "cache_write_tokens": 0
+              }
+            ]
+          }
+        ]
+      },
+      "github_api_calls": 16,
+      "graders": {
+        "version": 2,
+        "results": [
+          {
+            "id": "artifact-production",
+            "name": "Artifact Production",
+            "status": "pass",
+            "value": 1,
+            "unit": "count",
+            "direction": "higher_is_better"
+          },
+          {
+            "id": "context-growth",
+            "name": "Context Growth",
+            "status": "pass",
+            "value": 1.021405983945512,
+            "unit": "factor",
+            "direction": "lower_is_better"
+          },
+          {
+            "id": "execution-duration",
+            "name": "Execution Duration",
+            "status": "pass",
+            "value": 32333,
+            "unit": "ms",
+            "direction": "lower_is_better"
+          },
+          {
+            "id": "execution-step-count",
+            "name": "Execution Step Count",
+            "status": "pass",
+            "value": 2,
+            "unit": "count",
+            "direction": "lower_is_better"
+          },
+          {
+            "id": "loops",
+            "name": "Loops",
+            "status": "pass",
+            "value": 0,
+            "unit": "count",
+            "passed": true,
+            "direction": "lower_is_better",
+            "threshold": 3
+          },
+          {
+            "id": "retries",
+            "name": "Retries",
+            "status": "pass",
+            "value": 0,
+            "unit": "count",
+            "passed": true,
+            "direction": "lower_is_better",
+            "threshold": 10
+          },
+          {
+            "id": "tool-failure-count",
+            "name": "Tool Failure Count",
+            "status": "pass",
+            "value": 2,
+            "unit": "count",
+            "passed": true,
+            "direction": "lower_is_better",
+            "threshold": 5
+          },
+          {
+            "id": "tool-success-rate",
+            "name": "Tool Success Rate",
+            "status": "fail",
+            "value": 0.5,
+            "unit": "ratio",
+            "passed": false,
+            "direction": "higher_is_better",
+            "threshold": 0.8
+          },
+          {
+            "id": "trajectory-efficiency",
+            "name": "Trajectory Efficiency",
+            "status": "pass",
+            "value": 1,
+            "unit": "ratio",
+            "direction": "higher_is_better"
+          },
+          {
+            "id": "working-set-rebuild-factor",
+            "name": "Working-Set Rebuild Factor",
+            "status": "pass",
+            "value": 1.01849558252828,
+            "unit": "factor",
+            "direction": "lower_is_better"
+          }
+        ],
+        "total": 10,
+        "passed": 9,
+        "failed": 1,
+        "error_count": 0,
+        "unavailable_count": 0
+      },
+      "safe_outputs": [
+        {
+          "type": "add_comment",
+          "url": "https://github.com/ppv-1/rust-sandbox/pull/12#issuecomment-6401727617",
+          "number": 12,
+          "repo": "ppv-1/rust-sandbox",
+          "provider": "github",
+          "id": 6401727617,
+          "target": {
+            "number": 12,
+            "provider": "github",
+            "repository": "ppv-1/rust-sandbox"
+          },
+          "timestamp": "2026-10-25T18:51:46.342Z"
+        }
+      ],
+      "download_duration_ms": 3589,
+      "download_size_bytes": 172109
+    },
+    {
+      "job_count": 6,
+      "run_id": 40221117621,
+      "number": 11,
+      "workflow_name": "LLM-policy triage",
+      "workflow_path": ".github/workflows/llm-triage.lock.yml",
+      "agent": "copilot",
+      "engine": "GitHub Copilot CLI",
+      "engine_id": "copilot",
+      "model": "gpt-4.1",
+      "requested_model": "gpt-4.1",
+      "status": "completed",
+      "conclusion": "success",
+      "classification": "risky",
+      "duration": "7.4m",
+      "action_minutes": 8,
+      "token_usage": 12525,
+      "aic": 3.7908,
+      "ambient_context": {
+        "input_tokens": 12112,
+        "cached_tokens": 4992
+      },
+      "working_set": {
+        "measurement_state": "measured",
+        "rebuild_factor": 1.0104029062087185,
+        "cumulative_input_tokens": 12238,
+        "peak_input_tokens": 12112,
+        "rebuild_excess_tokens": 126,
+        "invocations": 2
+      },
+      "ledger": {
+        "transactions_added": 0
+      },
+      "friction": {
+        "measurement_state": "measured",
+        "canonical_unit": "aic",
+        "sources": [
+          "agent_session",
+          "agent_token_usage",
+          "firewall",
+          "mcp_gateway"
+        ],
+        "total_events": 0,
+        "total_occurrences": 0,
+        "counted_occurrences": 0,
+        "suppressed_occurrences": 0,
+        "cost": {
+          "aic": 0,
+          "tokens": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0,
+            "cache_write": 0,
+            "reasoning": 0,
+            "total": 0
+          },
+          "turns": 0,
+          "tool_calls": 0,
+          "latency_ms": 0
+        },
+        "total_run_aic": 3.7908,
+        "friction_ratio": 0,
+        "dimension_states": {
+          "aic": "measured",
+          "latency_ms": "measured",
+          "tokens": "measured",
+          "tool_calls": "measured",
+          "turns": "measured"
+        },
+        "uncertainty": {
+          "aic": {
+            "state": "measured",
+            "method": "direct_record",
+            "confidence": "high",
+            "relative_error": 0,
+            "lower_bound": 0,
+            "upper_bound": 0,
+            "sample_size": 2,
+            "basis": "AI credits of errored invocations (measured), of linked follow-up invocations (causal), or the mean healthy-invocation cost (statistical)"
+          },
+          "latency_ms": {
+            "state": "measured",
+            "method": "direct_record",
+            "confidence": "high",
+            "relative_error": 0,
+            "lower_bound": 0,
+            "upper_bound": 0,
+            "basis": "wall-clock duration recorded on the failing tool call or invocation"
+          },
+          "tokens": {
+            "state": "measured",
+            "method": "direct_record",
+            "confidence": "high",
+            "relative_error": 0,
+            "lower_bound": 0,
+            "upper_bound": 0,
+            "sample_size": 2,
+            "basis": "token classes of the attributed invocations"
+          },
+          "tool_calls": {
+            "state": "measured",
+            "method": "direct_record",
+            "confidence": "high",
+            "relative_error": 0,
+            "lower_bound": 0,
+            "upper_bound": 0,
+            "basis": "counted friction occurrences that consumed a tool call"
+          },
+          "turns": {
+            "state": "measured",
+            "method": "direct_record",
+            "confidence": "high",
+            "relative_error": 0,
+            "lower_bound": 0,
+            "upper_bound": 0,
+            "basis": "one additional turn per errored or retried model invocation"
+          }
+        },
+        "unmeasured_drivers": [
+          {
+            "driver": "agent_api_error",
+            "reason": "no_occurrences"
+          },
+          {
+            "driver": "firewall_block",
+            "reason": "no_occurrences"
+          },
+          {
+            "driver": "integrity_filter",
+            "reason": "no_occurrences"
+          },
+          {
+            "driver": "mcp_tool_error",
+            "reason": "no_occurrences"
+          },
+          {
+            "driver": "session_tool_failure",
+            "reason": "no_occurrences"
+          }
+        ]
+      },
+      "turns": 1,
+      "safe_items_count": 1,
+      "created_at": "2026-10-25T18:24:45Z",
+      "started_at": "2026-10-25T18:48:08Z",
+      "updated_at": "2026-10-25T18:55:31Z",
+      "url": "https://github.com/ppv-1/rust-sandbox/actions/runs/40221117621",
+      "logs_path": "evals\\golden\\logs\\run-40221117621",
+      "event": "pull_request",
+      "branch": "golden/160866",
+      "head_sha": "830b8da9aa9f7088bf80619d611dff2da609a428",
+      "display_title": "LLM-policy triage",
+      "repository": "ppv-1/rust-sandbox",
+      "organization": "ppv-1",
+      "ref": "refs/pull/11/merge",
+      "sha": "b8a79e47c407eaff86dca8cbc4c62dab79a58733",
+      "actor": "ppv-1",
+      "run_attempt": "2",
+      "event_name": "pull_request",
+      "comparison": {
+        "baseline_found": true,
+        "baseline": {
+          "run_id": 40221098037,
+          "workflow_name": "LLM-policy triage",
+          "conclusion": "success",
+          "created_at": "2026-10-25T18:24:30Z",
+          "selection": "cohort_match",
+          "matched_on": [
+            "event",
+            "task_domain",
+            "execution_style",
+            "resource_profile",
+            "dispatch_mode",
+            "tool_breadth"
+          ]
+        },
+        "delta": {
+          "turns": {
+            "before": 1,
+            "after": 1,
+            "changed": false
+          },
+          "posture": {
+            "before": "read_only",
+            "after": "write_capable",
+            "changed": true
+          },
+          "blocked_requests": {
+            "before": 0,
+            "after": 0,
+            "changed": false
+          }
+        },
+        "classification": {
+          "label": "risky",
+          "reason_codes": [
+            "posture_changed"
+          ]
+        },
+        "recommendation": {
+          "action": "Review first-time write-capable behavior and add a guardrail before enabling by default."
+        }
+      },
+      "task_domain": {
+        "name": "triage",
+        "label": "Triage",
+        "reason": "The run focused on classification, routing, or issue state updates."
+      },
+      "behavior_fingerprint": {
+        "execution_style": "directed",
+        "tool_breadth": "narrow",
+        "actuation_style": "selective_write",
+        "resource_profile": "moderate",
+        "dispatch_mode": "standalone",
+        "agentic_fraction": 1
+      },
+      "agentic_assessments": [
+        {
+          "kind": "model_downgrade_available",
+          "severity": "low",
+          "summary": "This Triage run may not need a frontier model. A smaller model (e.g. gpt-4.1-mini, claude-haiku-4-5) could handle the task at lower cost.",
+          "evidence": "domain=triage resource_profile=moderate actuation=selective_write",
+          "recommendation": "Try engine.model: gpt-4.1-mini or claude-haiku-4-5 in the workflow frontmatter."
+        }
+      ],
+      "token_usage_summary": {
+        "total_input_tokens": 12238,
+        "total_output_tokens": 287,
+        "total_cache_read_tokens": 22272,
+        "total_cache_write_tokens": 0,
+        "total_requests": 2,
+        "total_duration_ms": 30583,
+        "total_response_bytes": 62330,
+        "cache_efficiency": 0,
+        "total_aic": 3.7908,
+        "ambient_context": {
+          "input_tokens": 12112,
+          "cached_tokens": 4992
+        },
+        "by_model": {
+          "gpt-4.1-2025-04-14": {
+            "provider": "copilot",
+            "input_tokens": 12238,
+            "output_tokens": 287,
+            "cache_read_tokens": 22272,
+            "cache_write_tokens": 0,
+            "requests": 2,
+            "duration_ms": 30583,
+            "response_bytes": 62330,
+            "aic": 3.7908
+          }
+        },
+        "agent_usage": [
+          {
+            "agent_name": "main",
+            "agent_type": "main",
+            "source_engine": "copilot",
+            "instance_count": 1,
+            "served_models": [
+              "gpt-4.1",
+              "gpt-4.1-2025-04-14"
+            ],
+            "requests": 2,
+            "input_tokens": 34510,
+            "output_tokens": 287,
+            "cache_read_tokens": 22272,
+            "cache_write_tokens": 0,
+            "total_api_duration_ms": 30606,
+            "models": [
+              {
+                "model": "gpt-4.1",
+                "resolved_model": "gpt-4.1",
+                "requests": 2,
+                "input_tokens": 34510,
+                "output_tokens": 287,
+                "cache_read_tokens": 22272,
+                "cache_write_tokens": 0
+              }
+            ]
+          }
+        ]
+      },
+      "github_api_calls": 16,
+      "graders": {
+        "version": 2,
+        "results": [
+          {
+            "id": "artifact-production",
+            "name": "Artifact Production",
+            "status": "pass",
+            "value": 1,
+            "unit": "count",
+            "direction": "higher_is_better"
+          },
+          {
+            "id": "context-growth",
+            "name": "Context Growth",
+            "status": "pass",
+            "value": 1.0127759359585995,
+            "unit": "factor",
+            "direction": "lower_is_better"
+          },
+          {
+            "id": "execution-duration",
+            "name": "Execution Duration",
+            "status": "pass",
+            "value": 30583,
+            "unit": "ms",
+            "direction": "lower_is_better"
+          },
+          {
+            "id": "execution-step-count",
+            "name": "Execution Step Count",
+            "status": "pass",
+            "value": 2,
+            "unit": "count",
+            "direction": "lower_is_better"
+          },
+          {
+            "id": "loops",
+            "name": "Loops",
+            "status": "pass",
+            "value": 0,
+            "unit": "count",
+            "passed": true,
+            "direction": "lower_is_better",
+            "threshold": 3
+          },
+          {
+            "id": "retries",
+            "name": "Retries",
+            "status": "pass",
+            "value": 0,
+            "unit": "count",
+            "passed": true,
+            "direction": "lower_is_better",
+            "threshold": 10
+          },
+          {
+            "id": "tool-failure-count",
+            "name": "Tool Failure Count",
+            "status": "pass",
+            "value": 2,
+            "unit": "count",
+            "passed": true,
+            "direction": "lower_is_better",
+            "threshold": 5
+          },
+          {
+            "id": "tool-success-rate",
+            "name": "Tool Success Rate",
+            "status": "fail",
+            "value": 0.5,
+            "unit": "ratio",
+            "passed": false,
+            "direction": "higher_is_better",
+            "threshold": 0.8
+          },
+          {
+            "id": "trajectory-efficiency",
+            "name": "Trajectory Efficiency",
+            "status": "pass",
+            "value": 1,
+            "unit": "ratio",
+            "direction": "higher_is_better"
+          },
+          {
+            "id": "working-set-rebuild-factor",
+            "name": "Working-Set Rebuild Factor",
+            "status": "pass",
+            "value": 1.0104029062087185,
+            "unit": "factor",
+            "direction": "lower_is_better"
+          }
+        ],
+        "total": 10,
+        "passed": 9,
+        "failed": 1,
+        "error_count": 0,
+        "unavailable_count": 0
+      },
+      "safe_outputs": [
+        {
+          "type": "add_comment",
+          "url": "https://github.com/ppv-1/rust-sandbox/pull/11#issuecomment-6401730666",
+          "number": 11,
+          "repo": "ppv-1/rust-sandbox",
+          "provider": "github",
+          "id": 6401730666,
+          "target": {
+            "number": 11,
+            "provider": "github",
+            "repository": "ppv-1/rust-sandbox"
+          },
+          "timestamp": "2026-10-25T18:52:03.998Z"
+        }
+      ],
+      "download_duration_ms": 3190,
+      "download_size_bytes": 173307
+    },
+    {
+      "job_count": 6,
+      "run_id": 40221106172,
+      "number": 9,
+      "workflow_name": "LLM-policy triage",
+      "workflow_path": ".github/workflows/llm-triage.lock.yml",
+      "agent": "copilot",
+      "engine": "GitHub Copilot CLI",
+      "engine_id": "copilot",
+      "model": "auto",
+      "requested_model": "auto",
+      "status": "completed",
+      "conclusion": "success",
+      "classification": "normal",
+      "duration": "4.7m",
+      "action_minutes": 5,
+      "token_usage": 0,
+      "aic": 0,
+      "working_set": {
+        "measurement_state": "unavailable",
+        "cumulative_input_tokens": 0,
+        "peak_input_tokens": 0,
+        "rebuild_excess_tokens": 0,
+        "invocations": 0
+      },
+      "ledger": {
+        "transactions_added": 0
+      },
+      "friction": {
+        "measurement_state": "measured",
+        "canonical_unit": "aic",
+        "sources": [
+          "agent_session",
+          "firewall"
+        ],
+        "total_events": 0,
+        "total_occurrences": 0,
+        "counted_occurrences": 0,
+        "suppressed_occurrences": 0,
+        "cost": {
+          "aic": 0,
+          "tokens": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0,
+            "cache_write": 0,
+            "reasoning": 0,
+            "total": 0
+          },
+          "turns": 0,
+          "tool_calls": 0,
+          "latency_ms": 0
+        },
+        "dimension_states": {
+          "aic": "measured",
+          "latency_ms": "measured",
+          "tokens": "measured",
+          "tool_calls": "measured",
+          "turns": "measured"
+        },
+        "uncertainty": {
+          "aic": {
+            "state": "measured",
+            "method": "direct_record",
+            "confidence": "high",
+            "relative_error": 0,
+            "lower_bound": 0,
+            "upper_bound": 0,
+            "basis": "AI credits of errored invocations (measured), of linked follow-up invocations (causal), or the mean healthy-invocation cost (statistical)"
+          },
+          "latency_ms": {
+            "state": "measured",
+            "method": "direct_record",
+            "confidence": "high",
+            "relative_error": 0,
+            "lower_bound": 0,
+            "upper_bound": 0,
+            "basis": "wall-clock duration recorded on the failing tool call or invocation"
+          },
+          "tokens": {
+            "state": "measured",
+            "method": "direct_record",
+            "confidence": "high",
+            "relative_error": 0,
+            "lower_bound": 0,
+            "upper_bound": 0,
+            "basis": "token classes of the attributed invocations"
+          },
+          "tool_calls": {
+            "state": "measured",
+            "method": "direct_record",
+            "confidence": "high",
+            "relative_error": 0,
+            "lower_bound": 0,
+            "upper_bound": 0,
+            "basis": "counted friction occurrences that consumed a tool call"
+          },
+          "turns": {
+            "state": "measured",
+            "method": "direct_record",
+            "confidence": "high",
+            "relative_error": 0,
+            "lower_bound": 0,
+            "upper_bound": 0,
+            "basis": "one additional turn per errored or retried model invocation"
+          }
+        },
+        "unmeasured_drivers": [
+          {
+            "driver": "agent_api_error",
+            "reason": "source_unavailable:agent_token_usage"
+          },
+          {
+            "driver": "firewall_block",
+            "reason": "no_occurrences"
+          },
+          {
+            "driver": "integrity_filter",
+            "reason": "source_unavailable:mcp_gateway"
+          },
+          {
+            "driver": "mcp_tool_error",
+            "reason": "source_unavailable:mcp_gateway"
+          },
+          {
+            "driver": "session_tool_failure",
+            "reason": "no_occurrences"
+          }
+        ]
+      },
+      "turns": 1,
+      "created_at": "2026-10-25T18:24:36Z",
+      "started_at": "2026-10-25T18:48:01Z",
+      "updated_at": "2026-10-25T18:52:42Z",
+      "url": "https://github.com/ppv-1/rust-sandbox/actions/runs/40221106172",
+      "logs_path": "evals\\golden\\logs\\run-40221106172",
+      "event": "pull_request",
+      "branch": "golden/162367",
+      "head_sha": "8fd85b75dafa3ba0cede44efe23c2a02e08db431",
+      "display_title": "LLM-policy triage",
+      "repository": "ppv-1/rust-sandbox",
+      "organization": "ppv-1",
+      "ref": "refs/pull/9/merge",
+      "sha": "86639b9e9d73192a4fb01bbe15469ed4e1e6d32e",
+      "actor": "ppv-1",
+      "run_attempt": "1",
+      "event_name": "pull_request",
+      "comparison": {
+        "baseline_found": true,
+        "baseline": {
+          "run_id": 40221073405,
+          "workflow_name": "LLM-policy triage",
+          "conclusion": "success",
+          "created_at": "2026-10-25T18:24:12Z",
+          "selection": "cohort_match",
+          "matched_on": [
+            "event",
+            "task_domain",
+            "execution_style",
+            "resource_profile",
+            "actuation_style",
+            "dispatch_mode",
+            "tool_breadth"
+          ]
+        },
+        "delta": {
+          "turns": {
+            "before": 1,
+            "after": 1,
+            "changed": false
+          },
+          "posture": {
+            "before": "read_only",
+            "after": "read_only",
+            "changed": false
+          },
+          "blocked_requests": {
+            "before": 0,
+            "after": 0,
+            "changed": false
+          }
+        },
+        "classification": {
+          "label": "stable"
+        },
+        "recommendation": {
+          "action": "No action needed; this run matches the selected successful baseline closely."
+        }
+      },
+      "task_domain": {
+        "name": "triage",
+        "label": "Triage",
+        "reason": "The run focused on classification, routing, or issue state updates."
+      },
+      "behavior_fingerprint": {
+        "execution_style": "directed",
+        "tool_breadth": "narrow",
+        "actuation_style": "read_only",
+        "resource_profile": "lean",
+        "dispatch_mode": "standalone",
+        "agentic_fraction": 1
+      },
+      "agentic_assessments": [
+        {
+          "kind": "overkill_for_agentic",
+          "severity": "low",
+          "summary": "This Triage run looks stable enough that deterministic automation may be a simpler fit.",
+          "evidence": "turns=1 tool_types=0 actuation=read_only",
+          "recommendation": "Consider whether a scripted rule or deterministic workflow step could replace this agentic path."
+        }
+      ],
+      "github_api_calls": 21,
+      "graders": {
+        "version": 2,
+        "results": [
+          {
+            "id": "artifact-production",
+            "name": "Artifact Production",
+            "status": "pass",
+            "value": 0,
+            "unit": "count",
+            "direction": "higher_is_better"
+          },
+          {
+            "id": "context-growth",
+            "name": "Context Growth",
+            "status": "unavailable",
+            "unit": "factor",
+            "direction": "lower_is_better"
+          },
+          {
+            "id": "execution-duration",
+            "name": "Execution Duration",
+            "status": "unavailable",
+            "unit": "ms",
+            "direction": "lower_is_better"
+          },
+          {
+            "id": "execution-step-count",
+            "name": "Execution Step Count",
+            "status": "unavailable",
+            "unit": "count",
+            "direction": "lower_is_better"
+          },
+          {
+            "id": "loops",
+            "name": "Loops",
+            "status": "pass",
+            "value": 0,
+            "unit": "count",
+            "passed": true,
+            "direction": "lower_is_better",
+            "threshold": 3
+          },
+          {
+            "id": "retries",
+            "name": "Retries",
+            "status": "pass",
+            "value": 0,
+            "unit": "count",
+            "passed": true,
+            "direction": "lower_is_better",
+            "threshold": 10
+          },
+          {
+            "id": "tool-failure-count",
+            "name": "Tool Failure Count",
+            "status": "pass",
+            "value": 0,
+            "unit": "count",
+            "passed": true,
+            "direction": "lower_is_better",
+            "threshold": 5
+          },
+          {
+            "id": "tool-success-rate",
+            "name": "Tool Success Rate",
+            "status": "pass",
+            "value": 1,
+            "unit": "ratio",
+            "passed": true,
+            "direction": "higher_is_better",
+            "threshold": 0.8
+          },
+          {
+            "id": "trajectory-efficiency",
+            "name": "Trajectory Efficiency",
+            "status": "pass",
+            "value": 1,
+            "unit": "ratio",
+            "direction": "higher_is_better"
+          },
+          {
+            "id": "working-set-rebuild-factor",
+            "name": "Working-Set Rebuild Factor",
+            "status": "unavailable",
+            "unit": "factor",
+            "direction": "lower_is_better"
+          }
+        ],
+        "total": 10,
+        "passed": 6,
+        "failed": 0,
+        "error_count": 0,
+        "unavailable_count": 4
+      },
+      "download_duration_ms": 3661,
+      "download_size_bytes": 169222
+    },
+    {
+      "job_count": 6,
+      "run_id": 40221098037,
+      "number": 8,
+      "workflow_name": "LLM-policy triage",
+      "workflow_path": ".github/workflows/llm-triage.lock.yml",
+      "agent": "copilot",
+      "engine": "GitHub Copilot CLI",
+      "engine_id": "copilot",
+      "model": "auto",
+      "requested_model": "auto",
+      "status": "completed",
+      "conclusion": "success",
+      "classification": "normal",
+      "duration": "5.1m",
+      "action_minutes": 6,
+      "token_usage": 0,
+      "aic": 0,
+      "working_set": {
+        "measurement_state": "unavailable",
+        "cumulative_input_tokens": 0,
+        "peak_input_tokens": 0,
+        "rebuild_excess_tokens": 0,
+        "invocations": 0
+      },
+      "ledger": {
+        "transactions_added": 0
+      },
+      "friction": {
+        "measurement_state": "measured",
+        "canonical_unit": "aic",
+        "sources": [
+          "agent_session",
+          "firewall"
+        ],
+        "total_events": 0,
+        "total_occurrences": 0,
+        "counted_occurrences": 0,
+        "suppressed_occurrences": 0,
+        "cost": {
+          "aic": 0,
+          "tokens": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0,
+            "cache_write": 0,
+            "reasoning": 0,
+            "total": 0
+          },
+          "turns": 0,
+          "tool_calls": 0,
+          "latency_ms": 0
+        },
+        "dimension_states": {
+          "aic": "measured",
+          "latency_ms": "measured",
+          "tokens": "measured",
+          "tool_calls": "measured",
+          "turns": "measured"
+        },
+        "uncertainty": {
+          "aic": {
+            "state": "measured",
+            "method": "direct_record",
+            "confidence": "high",
+            "relative_error": 0,
+            "lower_bound": 0,
+            "upper_bound": 0,
+            "basis": "AI credits of errored invocations (measured), of linked follow-up invocations (causal), or the mean healthy-invocation cost (statistical)"
+          },
+          "latency_ms": {
+            "state": "measured",
+            "method": "direct_record",
+            "confidence": "high",
+            "relative_error": 0,
+            "lower_bound": 0,
+            "upper_bound": 0,
+            "basis": "wall-clock duration recorded on the failing tool call or invocation"
+          },
+          "tokens": {
+            "state": "measured",
+            "method": "direct_record",
+            "confidence": "high",
+            "relative_error": 0,
+            "lower_bound": 0,
+            "upper_bound": 0,
+            "basis": "token classes of the attributed invocations"
+          },
+          "tool_calls": {
+            "state": "measured",
+            "method": "direct_record",
+            "confidence": "high",
+            "relative_error": 0,
+            "lower_bound": 0,
+            "upper_bound": 0,
+            "basis": "counted friction occurrences that consumed a tool call"
+          },
+          "turns": {
+            "state": "measured",
+            "method": "direct_record",
+            "confidence": "high",
+            "relative_error": 0,
+            "lower_bound": 0,
+            "upper_bound": 0,
+            "basis": "one additional turn per errored or retried model invocation"
+          }
+        },
+        "unmeasured_drivers": [
+          {
+            "driver": "agent_api_error",
+            "reason": "source_unavailable:agent_token_usage"
+          },
+          {
+            "driver": "firewall_block",
+            "reason": "no_occurrences"
+          },
+          {
+            "driver": "integrity_filter",
+            "reason": "source_unavailable:mcp_gateway"
+          },
+          {
+            "driver": "mcp_tool_error",
+            "reason": "source_unavailable:mcp_gateway"
+          },
+          {
+            "driver": "session_tool_failure",
+            "reason": "no_occurrences"
+          }
+        ]
+      },
+      "turns": 1,
+      "created_at": "2026-10-25T18:24:30Z",
+      "started_at": "2026-10-25T18:47:58Z",
+      "updated_at": "2026-10-25T18:53:04Z",
+      "url": "https://github.com/ppv-1/rust-sandbox/actions/runs/40221098037",
+      "logs_path": "evals\\golden\\logs\\run-40221098037",
+      "event": "pull_request",
+      "branch": "golden/161743",
+      "head_sha": "77f837a9d7f470642e816113cadb44b7a81d8148",
+      "display_title": "LLM-policy triage",
+      "repository": "ppv-1/rust-sandbox",
+      "organization": "ppv-1",
+      "ref": "refs/pull/8/merge",
+      "sha": "c3270db965515f54aea08d73090a9dbb7b0d3d54",
+      "actor": "ppv-1",
+      "run_attempt": "1",
+      "event_name": "pull_request",
+      "comparison": {
+        "baseline_found": true,
+        "baseline": {
+          "run_id": 40221090784,
+          "workflow_name": "LLM-policy triage",
+          "conclusion": "success",
+          "created_at": "2026-10-25T18:24:25Z",
+          "selection": "cohort_match",
+          "matched_on": [
+            "event",
+            "task_domain",
+            "execution_style",
+            "resource_profile",
+            "actuation_style",
+            "dispatch_mode",
+            "tool_breadth"
+          ]
+        },
+        "delta": {
+          "turns": {
+            "before": 1,
+            "after": 1,
+            "changed": false
+          },
+          "posture": {
+            "before": "read_only",
+            "after": "read_only",
+            "changed": false
+          },
+          "blocked_requests": {
+            "before": 0,
+            "after": 0,
+            "changed": false
+          }
+        },
+        "classification": {
+          "label": "stable"
+        },
+        "recommendation": {
+          "action": "No action needed; this run matches the selected successful baseline closely."
+        }
+      },
+      "task_domain": {
+        "name": "triage",
+        "label": "Triage",
+        "reason": "The run focused on classification, routing, or issue state updates."
+      },
+      "behavior_fingerprint": {
+        "execution_style": "directed",
+        "tool_breadth": "narrow",
+        "actuation_style": "read_only",
+        "resource_profile": "moderate",
+        "dispatch_mode": "standalone",
+        "agentic_fraction": 1
+      },
+      "agentic_assessments": [
+        {
+          "kind": "model_downgrade_available",
+          "severity": "low",
+          "summary": "This Triage run may not need a frontier model. A smaller model (e.g. gpt-4.1-mini, claude-haiku-4-5) could handle the task at lower cost.",
+          "evidence": "domain=triage resource_profile=moderate actuation=read_only",
+          "recommendation": "Try engine.model: gpt-4.1-mini or claude-haiku-4-5 in the workflow frontmatter."
+        }
+      ],
+      "github_api_calls": 21,
+      "graders": {
+        "version": 2,
+        "results": [
+          {
+            "id": "artifact-production",
+            "name": "Artifact Production",
+            "status": "pass",
+            "value": 0,
+            "unit": "count",
+            "direction": "higher_is_better"
+          },
+          {
+            "id": "context-growth",
+            "name": "Context Growth",
+            "status": "unavailable",
+            "unit": "factor",
+            "direction": "lower_is_better"
+          },
+          {
+            "id": "execution-duration",
+            "name": "Execution Duration",
+            "status": "unavailable",
+            "unit": "ms",
+            "direction": "lower_is_better"
+          },
+          {
+            "id": "execution-step-count",
+            "name": "Execution Step Count",
+            "status": "unavailable",
+            "unit": "count",
+            "direction": "lower_is_better"
+          },
+          {
+            "id": "loops",
+            "name": "Loops",
+            "status": "pass",
+            "value": 0,
+            "unit": "count",
+            "passed": true,
+            "direction": "lower_is_better",
+            "threshold": 3
+          },
+          {
+            "id": "retries",
+            "name": "Retries",
+            "status": "pass",
+            "value": 0,
+            "unit": "count",
+            "passed": true,
+            "direction": "lower_is_better",
+            "threshold": 10
+          },
+          {
+            "id": "tool-failure-count",
+            "name": "Tool Failure Count",
+            "status": "pass",
+            "value": 0,
+            "unit": "count",
+            "passed": true,
+            "direction": "lower_is_better",
+            "threshold": 5
+          },
+          {
+            "id": "tool-success-rate",
+            "name": "Tool Success Rate",
+            "status": "pass",
+            "value": 1,
+            "unit": "ratio",
+            "passed": true,
+            "direction": "higher_is_better",
+            "threshold": 0.8
+          },
+          {
+            "id": "trajectory-efficiency",
+            "name": "Trajectory Efficiency",
+            "status": "pass",
+            "value": 1,
+            "unit": "ratio",
+            "direction": "higher_is_better"
+          },
+          {
+            "id": "working-set-rebuild-factor",
+            "name": "Working-Set Rebuild Factor",
+            "status": "unavailable",
+            "unit": "factor",
+            "direction": "lower_is_better"
+          }
+        ],
+        "total": 10,
+        "passed": 6,
+        "failed": 0,
+        "error_count": 0,
+        "unavailable_count": 4
+      },
+      "download_duration_ms": 3497,
+      "download_size_bytes": 168194
+    },
+    {
+      "job_count": 6,
+      "run_id": 40221090784,
+      "number": 7,
+      "workflow_name": "LLM-policy triage",
+      "workflow_path": ".github/workflows/llm-triage.lock.yml",
+      "agent": "copilot",
+      "engine": "GitHub Copilot CLI",
+      "engine_id": "copilot",
+      "model": "auto",
+      "requested_model": "auto",
+      "status": "completed",
+      "conclusion": "success",
+      "classification": "normal",
+      "duration": "7.3m",
+      "action_minutes": 8,
+      "token_usage": 0,
+      "aic": 0,
+      "working_set": {
+        "measurement_state": "unavailable",
+        "cumulative_input_tokens": 0,
+        "peak_input_tokens": 0,
+        "rebuild_excess_tokens": 0,
+        "invocations": 0
+      },
+      "ledger": {
+        "transactions_added": 0
+      },
+      "friction": {
+        "measurement_state": "measured",
+        "canonical_unit": "aic",
+        "sources": [
+          "agent_session",
+          "firewall"
+        ],
+        "total_events": 0,
+        "total_occurrences": 0,
+        "counted_occurrences": 0,
+        "suppressed_occurrences": 0,
+        "cost": {
+          "aic": 0,
+          "tokens": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0,
+            "cache_write": 0,
+            "reasoning": 0,
+            "total": 0
+          },
+          "turns": 0,
+          "tool_calls": 0,
+          "latency_ms": 0
+        },
+        "dimension_states": {
+          "aic": "measured",
+          "latency_ms": "measured",
+          "tokens": "measured",
+          "tool_calls": "measured",
+          "turns": "measured"
+        },
+        "uncertainty": {
+          "aic": {
+            "state": "measured",
+            "method": "direct_record",
+            "confidence": "high",
+            "relative_error": 0,
+            "lower_bound": 0,
+            "upper_bound": 0,
+            "basis": "AI credits of errored invocations (measured), of linked follow-up invocations (causal), or the mean healthy-invocation cost (statistical)"
+          },
+          "latency_ms": {
+            "state": "measured",
+            "method": "direct_record",
+            "confidence": "high",
+            "relative_error": 0,
+            "lower_bound": 0,
+            "upper_bound": 0,
+            "basis": "wall-clock duration recorded on the failing tool call or invocation"
+          },
+          "tokens": {
+            "state": "measured",
+            "method": "direct_record",
+            "confidence": "high",
+            "relative_error": 0,
+            "lower_bound": 0,
+            "upper_bound": 0,
+            "basis": "token classes of the attributed invocations"
+          },
+          "tool_calls": {
+            "state": "measured",
+            "method": "direct_record",
+            "confidence": "high",
+            "relative_error": 0,
+            "lower_bound": 0,
+            "upper_bound": 0,
+            "basis": "counted friction occurrences that consumed a tool call"
+          },
+          "turns": {
+            "state": "measured",
+            "method": "direct_record",
+            "confidence": "high",
+            "relative_error": 0,
+            "lower_bound": 0,
+            "upper_bound": 0,
+            "basis": "one additional turn per errored or retried model invocation"
+          }
+        },
+        "unmeasured_drivers": [
+          {
+            "driver": "agent_api_error",
+            "reason": "source_unavailable:agent_token_usage"
+          },
+          {
+            "driver": "firewall_block",
+            "reason": "no_occurrences"
+          },
+          {
+            "driver": "integrity_filter",
+            "reason": "source_unavailable:mcp_gateway"
+          },
+          {
+            "driver": "mcp_tool_error",
+            "reason": "source_unavailable:mcp_gateway"
+          },
+          {
+            "driver": "session_tool_failure",
+            "reason": "no_occurrences"
+          }
+        ]
+      },
+      "turns": 1,
+      "created_at": "2026-10-25T18:24:25Z",
+      "started_at": "2026-10-25T18:47:55Z",
+      "updated_at": "2026-10-25T18:55:10Z",
+      "url": "https://github.com/ppv-1/rust-sandbox/actions/runs/40221090784",
+      "logs_path": "evals\\golden\\logs\\run-40221090784",
+      "event": "pull_request",
+      "branch": "golden/160925",
+      "head_sha": "164d4b9d0112f2eb9b99de0993ba51b82a254da4",
+      "display_title": "LLM-policy triage",
+      "repository": "ppv-1/rust-sandbox",
+      "organization": "ppv-1",
+      "ref": "refs/pull/7/merge",
+      "sha": "db884433b8835d60b2dd0391dec1abe390d2681a",
+      "actor": "ppv-1",
+      "run_attempt": "1",
+      "event_name": "pull_request",
+      "comparison": {
+        "baseline_found": true,
+        "baseline": {
+          "run_id": 40221083084,
+          "workflow_name": "LLM-policy triage",
+          "conclusion": "success",
+          "created_at": "2026-10-25T18:24:19Z",
+          "selection": "cohort_match",
+          "matched_on": [
+            "event",
+            "task_domain",
+            "execution_style",
+            "resource_profile",
+            "actuation_style",
+            "dispatch_mode",
+            "tool_breadth"
+          ]
+        },
+        "delta": {
+          "turns": {
+            "before": 1,
+            "after": 1,
+            "changed": false
+          },
+          "posture": {
+            "before": "read_only",
+            "after": "read_only",
+            "changed": false
+          },
+          "blocked_requests": {
+            "before": 0,
+            "after": 0,
+            "changed": false
+          }
+        },
+        "classification": {
+          "label": "stable"
+        },
+        "recommendation": {
+          "action": "No action needed; this run matches the selected successful baseline closely."
+        }
+      },
+      "task_domain": {
+        "name": "triage",
+        "label": "Triage",
+        "reason": "The run focused on classification, routing, or issue state updates."
+      },
+      "behavior_fingerprint": {
+        "execution_style": "directed",
+        "tool_breadth": "narrow",
+        "actuation_style": "read_only",
+        "resource_profile": "moderate",
+        "dispatch_mode": "standalone",
+        "agentic_fraction": 1
+      },
+      "agentic_assessments": [
+        {
+          "kind": "model_downgrade_available",
+          "severity": "low",
+          "summary": "This Triage run may not need a frontier model. A smaller model (e.g. gpt-4.1-mini, claude-haiku-4-5) could handle the task at lower cost.",
+          "evidence": "domain=triage resource_profile=moderate actuation=read_only",
+          "recommendation": "Try engine.model: gpt-4.1-mini or claude-haiku-4-5 in the workflow frontmatter."
+        }
+      ],
+      "github_api_calls": 21,
+      "graders": {
+        "version": 2,
+        "results": [
+          {
+            "id": "artifact-production",
+            "name": "Artifact Production",
+            "status": "pass",
+            "value": 0,
+            "unit": "count",
+            "direction": "higher_is_better"
+          },
+          {
+            "id": "context-growth",
+            "name": "Context Growth",
+            "status": "unavailable",
+            "unit": "factor",
+            "direction": "lower_is_better"
+          },
+          {
+            "id": "execution-duration",
+            "name": "Execution Duration",
+            "status": "unavailable",
+            "unit": "ms",
+            "direction": "lower_is_better"
+          },
+          {
+            "id": "execution-step-count",
+            "name": "Execution Step Count",
+            "status": "unavailable",
+            "unit": "count",
+            "direction": "lower_is_better"
+          },
+          {
+            "id": "loops",
+            "name": "Loops",
+            "status": "pass",
+            "value": 0,
+            "unit": "count",
+            "passed": true,
+            "direction": "lower_is_better",
+            "threshold": 3
+          },
+          {
+            "id": "retries",
+            "name": "Retries",
+            "status": "pass",
+            "value": 0,
+            "unit": "count",
+            "passed": true,
+            "direction": "lower_is_better",
+            "threshold": 10
+          },
+          {
+            "id": "tool-failure-count",
+            "name": "Tool Failure Count",
+            "status": "pass",
+            "value": 0,
+            "unit": "count",
+            "passed": true,
+            "direction": "lower_is_better",
+            "threshold": 5
+          },
+          {
+            "id": "tool-success-rate",
+            "name": "Tool Success Rate",
+            "status": "pass",
+            "value": 1,
+            "unit": "ratio",
+            "passed": true,
+            "direction": "higher_is_better",
+            "threshold": 0.8
+          },
+          {
+            "id": "trajectory-efficiency",
+            "name": "Trajectory Efficiency",
+            "status": "pass",
+            "value": 1,
+            "unit": "ratio",
+            "direction": "higher_is_better"
+          },
+          {
+            "id": "working-set-rebuild-factor",
+            "name": "Working-Set Rebuild Factor",
+            "status": "unavailable",
+            "unit": "factor",
+            "direction": "lower_is_better"
+          }
+        ],
+        "total": 10,
+        "passed": 6,
+        "failed": 0,
+        "error_count": 0,
+        "unavailable_count": 4
+      },
+      "download_duration_ms": 3725,
+      "download_size_bytes": 168167
+    },
+    {
+      "job_count": 6,
+      "run_id": 40221083084,
+      "number": 6,
+      "workflow_name": "LLM-policy triage",
+      "workflow_path": ".github/workflows/llm-triage.lock.yml",
+      "agent": "copilot",
+      "engine": "GitHub Copilot CLI",
+      "engine_id": "copilot",
+      "model": "gpt-4.1",
+      "requested_model": "gpt-4.1",
+      "status": "completed",
+      "conclusion": "success",
+      "classification": "normal",
+      "duration": "5.9m",
+      "action_minutes": 6,
+      "token_usage": 13720,
+      "aic": 5.7458,
+      "ambient_context": {
+        "input_tokens": 12112,
+        "cached_tokens": 4992
+      },
+      "working_set": {
+        "measurement_state": "measured",
+        "rebuild_factor": 1.121284676354029,
+        "cumulative_input_tokens": 13581,
+        "peak_input_tokens": 12112,
+        "rebuild_excess_tokens": 1469,
+        "invocations": 4
+      },
+      "ledger": {
+        "transactions_added": 0
+      },
+      "friction": {
+        "measurement_state": "statistical",
+        "canonical_unit": "aic",
+        "sources": [
+          "agent_session",
+          "agent_token_usage",
+          "firewall",
+          "mcp_gateway"
+        ],
+        "total_events": 1,
+        "total_occurrences": 1,
+        "counted_occurrences": 1,
+        "suppressed_occurrences": 0,
+        "cost": {
+          "aic": 1.43645,
+          "tokens": {
+            "input": 3395,
+            "output": 35,
+            "cache_read": 14592,
+            "cache_write": 0,
+            "reasoning": 0,
+            "total": 18022
+          },
+          "turns": 0,
+          "tool_calls": 1,
+          "latency_ms": 0
+        },
+        "total_run_aic": 5.7458,
+        "friction_ratio": 0.25,
+        "dimension_states": {
+          "aic": "statistical",
+          "latency_ms": "unavailable",
+          "tokens": "statistical",
+          "tool_calls": "measured",
+          "turns": "unavailable"
+        },
+        "uncertainty": {
+          "aic": {
+            "state": "statistical",
+            "method": "mean_invocation_apportionment",
+            "confidence": "low",
+            "relative_error": 0.2911390014208765,
+            "lower_bound": 0.6167650275616046,
+            "upper_bound": 2.2561349724383954,
+            "confidence_level": 0.95,
+            "sample_size": 4,
+            "basis": "AI credits of errored invocations (measured), of linked follow-up invocations (causal), or the mean healthy-invocation cost (statistical)"
+          },
+          "latency_ms": {
+            "state": "unavailable",
+            "method": "none",
+            "confidence": "none",
+            "sample_size": 1,
+            "basis": "wall-clock duration recorded on the failing tool call or invocation"
+          },
+          "tokens": {
+            "state": "statistical",
+            "method": "mean_invocation_apportionment",
+            "confidence": "medium",
+            "relative_error": 0.01672385425978763,
+            "lower_bound": 17431.26128911901,
+            "upper_bound": 18612.73871088099,
+            "confidence_level": 0.95,
+            "sample_size": 4,
+            "basis": "token classes of the attributed invocations"
+          },
+          "tool_calls": {
+            "state": "measured",
+            "method": "direct_record",
+            "confidence": "high",
+            "relative_error": 0,
+            "lower_bound": 1,
+            "upper_bound": 1,
+            "sample_size": 1,
+            "basis": "counted friction occurrences that consumed a tool call"
+          },
+          "turns": {
+            "state": "unavailable",
+            "method": "none",
+            "confidence": "none",
+            "basis": "one additional turn per errored or retried model invocation"
+          }
+        },
+        "drivers": [
+          {
+            "driver": "session_tool_failure",
+            "class": "tool_failure",
+            "source": "agent_session",
+            "events": 1,
+            "occurrences": 1,
+            "counted_occurrences": 1,
+            "suppressed_occurrences": 0,
+            "state": "statistical",
+            "cost": {
+              "aic": 1.43645,
+              "tokens": {
+                "input": 3395,
+                "output": 35,
+                "cache_read": 14592,
+                "cache_write": 0,
+                "reasoning": 0,
+                "total": 18022
+              },
+              "turns": 0,
+              "tool_calls": 1,
+              "latency_ms": 0
+            }
+          }
+        ],
+        "groups": [
+          {
+            "group_id": "tool_failure",
+            "primary_source": "agent_session",
+            "event_ids": [
+              "session_tool_failure:aggregate"
+            ],
+            "total_occurrences": 1,
+            "counted_occurrences": 1,
+            "suppressed_occurrences": 0,
+            "rule": "highest-fidelity source owns overlapping occurrences; lower-fidelity sources contribute only their excess"
+          }
+        ],
+        "events": [
+          {
+            "id": "session_tool_failure:aggregate",
+            "driver": "session_tool_failure",
+            "source": "agent_session",
+            "group_id": "tool_failure",
+            "label": "agent session tool executions",
+            "occurrences": 1,
+            "counted_occurrences": 1,
+            "suppressed_occurrences": 0,
+            "attribution_class": "statistically_estimated",
+            "state": "statistical",
+            "estimation_method": "mean_invocation_apportionment",
+            "lower_bound_aic": 0.6167650275616046,
+            "upper_bound_aic": 2.2561349724383954,
+            "confidence": "low",
+            "dimension_states": {
+              "aic": "statistical",
+              "latency_ms": "unsupported",
+              "tokens": "statistical",
+              "tool_calls": "measured",
+              "turns": "unsupported"
+            },
+            "cost": {
+              "aic": 1.43645,
+              "tokens": {
+                "input": 3395,
+                "output": 35,
+                "cache_read": 14592,
+                "cache_write": 0,
+                "reasoning": 0,
+                "total": 18022
+              },
+              "turns": 0,
+              "tool_calls": 1,
+              "latency_ms": 0
+            }
+          }
+        ],
+        "unmeasured_drivers": [
+          {
+            "driver": "agent_api_error",
+            "reason": "no_occurrences"
+          },
+          {
+            "driver": "firewall_block",
+            "reason": "no_occurrences"
+          },
+          {
+            "driver": "integrity_filter",
+            "reason": "no_occurrences"
+          },
+          {
+            "driver": "mcp_tool_error",
+            "reason": "no_occurrences"
+          }
+        ]
+      },
+      "turns": 1,
+      "created_at": "2026-10-25T18:24:19Z",
+      "started_at": "2026-10-25T18:47:51Z",
+      "updated_at": "2026-10-25T18:53:46Z",
+      "url": "https://github.com/ppv-1/rust-sandbox/actions/runs/40221083084",
+      "logs_path": "evals\\golden\\logs\\run-40221083084",
+      "event": "pull_request",
+      "branch": "golden/160629",
+      "head_sha": "6a3e910be80ed5fd52ae86cc9983a5e719b33dcc",
+      "display_title": "LLM-policy triage",
+      "repository": "ppv-1/rust-sandbox",
+      "organization": "ppv-1",
+      "ref": "refs/pull/6/merge",
+      "sha": "38778d8180ff09bf2c6ac23ff3d2b77c2fbfb574",
+      "actor": "ppv-1",
+      "run_attempt": "2",
+      "event_name": "pull_request",
+      "comparison": {
+        "baseline_found": true,
+        "baseline": {
+          "run_id": 40221073405,
+          "workflow_name": "LLM-policy triage",
+          "conclusion": "success",
+          "created_at": "2026-10-25T18:24:12Z",
+          "selection": "cohort_match",
+          "matched_on": [
+            "event",
+            "task_domain",
+            "execution_style",
+            "actuation_style",
+            "dispatch_mode",
+            "tool_breadth"
+          ]
+        },
+        "delta": {
+          "turns": {
+            "before": 1,
+            "after": 1,
+            "changed": false
+          },
+          "posture": {
+            "before": "read_only",
+            "after": "read_only",
+            "changed": false
+          },
+          "blocked_requests": {
+            "before": 0,
+            "after": 0,
+            "changed": false
+          }
+        },
+        "classification": {
+          "label": "stable"
+        },
+        "recommendation": {
+          "action": "No action needed; this run matches the selected successful baseline closely."
+        }
+      },
+      "task_domain": {
+        "name": "triage",
+        "label": "Triage",
+        "reason": "The run focused on classification, routing, or issue state updates."
+      },
+      "behavior_fingerprint": {
+        "execution_style": "directed",
+        "tool_breadth": "narrow",
+        "actuation_style": "read_only",
+        "resource_profile": "moderate",
+        "dispatch_mode": "standalone",
+        "agentic_fraction": 1
+      },
+      "agentic_assessments": [
+        {
+          "kind": "model_downgrade_available",
+          "severity": "low",
+          "summary": "This Triage run may not need a frontier model. A smaller model (e.g. gpt-4.1-mini, claude-haiku-4-5) could handle the task at lower cost.",
+          "evidence": "domain=triage resource_profile=moderate actuation=read_only",
+          "recommendation": "Try engine.model: gpt-4.1-mini or claude-haiku-4-5 in the workflow frontmatter."
+        }
+      ],
+      "token_usage_summary": {
+        "total_input_tokens": 13581,
+        "total_output_tokens": 139,
+        "total_cache_read_tokens": 58368,
+        "total_cache_write_tokens": 0,
+        "total_requests": 4,
+        "total_duration_ms": 14083,
+        "total_response_bytes": 35480,
+        "cache_efficiency": 0,
+        "total_aic": 5.7458,
+        "ambient_context": {
+          "input_tokens": 12112,
+          "cached_tokens": 4992
+        },
+        "by_model": {
+          "gpt-4.1-2025-04-14": {
+            "provider": "copilot",
+            "input_tokens": 13581,
+            "output_tokens": 139,
+            "cache_read_tokens": 58368,
+            "cache_write_tokens": 0,
+            "requests": 4,
+            "duration_ms": 14083,
+            "response_bytes": 35480,
+            "aic": 5.7458
+          }
+        },
+        "agent_usage": [
+          {
+            "agent_name": "main",
+            "agent_type": "main",
+            "source_engine": "copilot",
+            "instance_count": 1,
+            "served_models": [
+              "gpt-4.1",
+              "gpt-4.1-2025-04-14"
+            ],
+            "requests": 4,
+            "input_tokens": 71949,
+            "output_tokens": 139,
+            "cache_read_tokens": 58368,
+            "cache_write_tokens": 0,
+            "total_api_duration_ms": 14121,
+            "models": [
+              {
+                "model": "gpt-4.1",
+                "resolved_model": "gpt-4.1",
+                "requests": 4,
+                "input_tokens": 71949,
+                "output_tokens": 139,
+                "cache_read_tokens": 58368,
+                "cache_write_tokens": 0
+              }
+            ]
+          }
+        ]
+      },
+      "github_api_calls": 16,
+      "graders": {
+        "version": 2,
+        "results": [
+          {
+            "id": "artifact-production",
+            "name": "Artifact Production",
+            "status": "pass",
+            "value": 0,
+            "unit": "count",
+            "direction": "higher_is_better"
+          },
+          {
+            "id": "context-growth",
+            "name": "Context Growth",
+            "status": "pass",
+            "value": 1.1311732212053756,
+            "unit": "factor",
+            "direction": "lower_is_better"
+          },
+          {
+            "id": "execution-duration",
+            "name": "Execution Duration",
+            "status": "pass",
+            "value": 14083,
+            "unit": "ms",
+            "direction": "lower_is_better"
+          },
+          {
+            "id": "execution-step-count",
+            "name": "Execution Step Count",
+            "status": "pass",
+            "value": 4,
+            "unit": "count",
+            "direction": "lower_is_better"
+          },
+          {
+            "id": "loops",
+            "name": "Loops",
+            "status": "pass",
+            "value": 0,
+            "unit": "count",
+            "passed": true,
+            "direction": "lower_is_better",
+            "threshold": 3
+          },
+          {
+            "id": "retries",
+            "name": "Retries",
+            "status": "pass",
+            "value": 0,
+            "unit": "count",
+            "passed": true,
+            "direction": "lower_is_better",
+            "threshold": 10
+          },
+          {
+            "id": "tool-failure-count",
+            "name": "Tool Failure Count",
+            "status": "pass",
+            "value": 2,
+            "unit": "count",
+            "passed": true,
+            "direction": "lower_is_better",
+            "threshold": 5
+          },
+          {
+            "id": "tool-success-rate",
+            "name": "Tool Success Rate",
+            "status": "fail",
+            "value": 0.5,
+            "unit": "ratio",
+            "passed": false,
+            "direction": "higher_is_better",
+            "threshold": 0.8
+          },
+          {
+            "id": "trajectory-efficiency",
+            "name": "Trajectory Efficiency",
+            "status": "pass",
+            "value": 1,
+            "unit": "ratio",
+            "direction": "higher_is_better"
+          },
+          {
+            "id": "working-set-rebuild-factor",
+            "name": "Working-Set Rebuild Factor",
+            "status": "pass",
+            "value": 1.121284676354029,
+            "unit": "factor",
+            "direction": "lower_is_better"
+          }
+        ],
+        "total": 10,
+        "passed": 9,
+        "failed": 1,
+        "error_count": 0,
+        "unavailable_count": 0
+      },
+      "download_duration_ms": 3158,
+      "download_size_bytes": 188437
+    },
+    {
+      "job_count": 6,
+      "run_id": 40221073405,
+      "number": 5,
+      "workflow_name": "LLM-policy triage",
+      "workflow_path": ".github/workflows/llm-triage.lock.yml",
+      "agent": "copilot",
+      "engine": "GitHub Copilot CLI",
+      "engine_id": "copilot",
+      "model": "auto",
+      "requested_model": "auto",
+      "status": "completed",
+      "conclusion": "success",
+      "classification": "normal",
+      "duration": "4.2m",
+      "action_minutes": 5,
+      "token_usage": 0,
+      "aic": 0,
+      "working_set": {
+        "measurement_state": "unavailable",
+        "cumulative_input_tokens": 0,
+        "peak_input_tokens": 0,
+        "rebuild_excess_tokens": 0,
+        "invocations": 0
+      },
+      "ledger": {
+        "transactions_added": 0
+      },
+      "friction": {
+        "measurement_state": "measured",
+        "canonical_unit": "aic",
+        "sources": [
+          "agent_session",
+          "firewall"
+        ],
+        "total_events": 0,
+        "total_occurrences": 0,
+        "counted_occurrences": 0,
+        "suppressed_occurrences": 0,
+        "cost": {
+          "aic": 0,
+          "tokens": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0,
+            "cache_write": 0,
+            "reasoning": 0,
+            "total": 0
+          },
+          "turns": 0,
+          "tool_calls": 0,
+          "latency_ms": 0
+        },
+        "dimension_states": {
+          "aic": "measured",
+          "latency_ms": "measured",
+          "tokens": "measured",
+          "tool_calls": "measured",
+          "turns": "measured"
+        },
+        "uncertainty": {
+          "aic": {
+            "state": "measured",
+            "method": "direct_record",
+            "confidence": "high",
+            "relative_error": 0,
+            "lower_bound": 0,
+            "upper_bound": 0,
+            "basis": "AI credits of errored invocations (measured), of linked follow-up invocations (causal), or the mean healthy-invocation cost (statistical)"
+          },
+          "latency_ms": {
+            "state": "measured",
+            "method": "direct_record",
+            "confidence": "high",
+            "relative_error": 0,
+            "lower_bound": 0,
+            "upper_bound": 0,
+            "basis": "wall-clock duration recorded on the failing tool call or invocation"
+          },
+          "tokens": {
+            "state": "measured",
+            "method": "direct_record",
+            "confidence": "high",
+            "relative_error": 0,
+            "lower_bound": 0,
+            "upper_bound": 0,
+            "basis": "token classes of the attributed invocations"
+          },
+          "tool_calls": {
+            "state": "measured",
+            "method": "direct_record",
+            "confidence": "high",
+            "relative_error": 0,
+            "lower_bound": 0,
+            "upper_bound": 0,
+            "basis": "counted friction occurrences that consumed a tool call"
+          },
+          "turns": {
+            "state": "measured",
+            "method": "direct_record",
+            "confidence": "high",
+            "relative_error": 0,
+            "lower_bound": 0,
+            "upper_bound": 0,
+            "basis": "one additional turn per errored or retried model invocation"
+          }
+        },
+        "unmeasured_drivers": [
+          {
+            "driver": "agent_api_error",
+            "reason": "source_unavailable:agent_token_usage"
+          },
+          {
+            "driver": "firewall_block",
+            "reason": "no_occurrences"
+          },
+          {
+            "driver": "integrity_filter",
+            "reason": "source_unavailable:mcp_gateway"
+          },
+          {
+            "driver": "mcp_tool_error",
+            "reason": "source_unavailable:mcp_gateway"
+          },
+          {
+            "driver": "session_tool_failure",
+            "reason": "no_occurrences"
+          }
+        ]
+      },
+      "turns": 1,
+      "created_at": "2026-10-25T18:24:12Z",
+      "started_at": "2026-10-25T18:47:48Z",
+      "updated_at": "2026-10-25T18:52:02Z",
+      "url": "https://github.com/ppv-1/rust-sandbox/actions/runs/40221073405",
+      "logs_path": "evals\\golden\\logs\\run-40221073405",
+      "event": "pull_request",
+      "branch": "golden/160997",
+      "head_sha": "e8000a74813ebf86d4884f0da15e49cc5f06770b",
+      "display_title": "LLM-policy triage",
+      "repository": "ppv-1/rust-sandbox",
+      "organization": "ppv-1",
+      "ref": "refs/pull/5/merge",
+      "sha": "dcb78f205f86b5166759da42a3f53675bacc36d9",
+      "actor": "ppv-1",
+      "run_attempt": "1",
+      "event_name": "pull_request",
+      "comparison": {
+        "baseline_found": true,
+        "baseline": {
+          "run_id": 40221064698,
+          "workflow_name": "LLM-policy triage",
+          "conclusion": "success",
+          "created_at": "2026-10-25T18:24:06Z",
+          "selection": "cohort_match",
+          "matched_on": [
+            "event",
+            "task_domain",
+            "execution_style",
+            "resource_profile",
+            "actuation_style",
+            "dispatch_mode",
+            "tool_breadth"
+          ]
+        },
+        "delta": {
+          "turns": {
+            "before": 1,
+            "after": 1,
+            "changed": false
+          },
+          "posture": {
+            "before": "read_only",
+            "after": "read_only",
+            "changed": false
+          },
+          "blocked_requests": {
+            "before": 0,
+            "after": 0,
+            "changed": false
+          }
+        },
+        "classification": {
+          "label": "stable"
+        },
+        "recommendation": {
+          "action": "No action needed; this run matches the selected successful baseline closely."
+        }
+      },
+      "task_domain": {
+        "name": "triage",
+        "label": "Triage",
+        "reason": "The run focused on classification, routing, or issue state updates."
+      },
+      "behavior_fingerprint": {
+        "execution_style": "directed",
+        "tool_breadth": "narrow",
+        "actuation_style": "read_only",
+        "resource_profile": "lean",
+        "dispatch_mode": "standalone",
+        "agentic_fraction": 1
+      },
+      "agentic_assessments": [
+        {
+          "kind": "overkill_for_agentic",
+          "severity": "low",
+          "summary": "This Triage run looks stable enough that deterministic automation may be a simpler fit.",
+          "evidence": "turns=1 tool_types=0 actuation=read_only",
+          "recommendation": "Consider whether a scripted rule or deterministic workflow step could replace this agentic path."
+        }
+      ],
+      "github_api_calls": 21,
+      "graders": {
+        "version": 2,
+        "results": [
+          {
+            "id": "artifact-production",
+            "name": "Artifact Production",
+            "status": "pass",
+            "value": 0,
+            "unit": "count",
+            "direction": "higher_is_better"
+          },
+          {
+            "id": "context-growth",
+            "name": "Context Growth",
+            "status": "unavailable",
+            "unit": "factor",
+            "direction": "lower_is_better"
+          },
+          {
+            "id": "execution-duration",
+            "name": "Execution Duration",
+            "status": "unavailable",
+            "unit": "ms",
+            "direction": "lower_is_better"
+          },
+          {
+            "id": "execution-step-count",
+            "name": "Execution Step Count",
+            "status": "unavailable",
+            "unit": "count",
+            "direction": "lower_is_better"
+          },
+          {
+            "id": "loops",
+            "name": "Loops",
+            "status": "pass",
+            "value": 0,
+            "unit": "count",
+            "passed": true,
+            "direction": "lower_is_better",
+            "threshold": 3
+          },
+          {
+            "id": "retries",
+            "name": "Retries",
+            "status": "pass",
+            "value": 0,
+            "unit": "count",
+            "passed": true,
+            "direction": "lower_is_better",
+            "threshold": 10
+          },
+          {
+            "id": "tool-failure-count",
+            "name": "Tool Failure Count",
+            "status": "pass",
+            "value": 0,
+            "unit": "count",
+            "passed": true,
+            "direction": "lower_is_better",
+            "threshold": 5
+          },
+          {
+            "id": "tool-success-rate",
+            "name": "Tool Success Rate",
+            "status": "pass",
+            "value": 1,
+            "unit": "ratio",
+            "passed": true,
+            "direction": "higher_is_better",
+            "threshold": 0.8
+          },
+          {
+            "id": "trajectory-efficiency",
+            "name": "Trajectory Efficiency",
+            "status": "pass",
+            "value": 1,
+            "unit": "ratio",
+            "direction": "higher_is_better"
+          },
+          {
+            "id": "working-set-rebuild-factor",
+            "name": "Working-Set Rebuild Factor",
+            "status": "unavailable",
+            "unit": "factor",
+            "direction": "lower_is_better"
+          }
+        ],
+        "total": 10,
+        "passed": 6,
+        "failed": 0,
+        "error_count": 0,
+        "unavailable_count": 4
+      },
+      "download_duration_ms": 3489,
+      "download_size_bytes": 168976
+    },
+    {
+      "job_count": 6,
+      "run_id": 40221064698,
+      "number": 4,
+      "workflow_name": "LLM-policy triage",
+      "workflow_path": ".github/workflows/llm-triage.lock.yml",
+      "agent": "copilot",
+      "engine": "GitHub Copilot CLI",
+      "engine_id": "copilot",
+      "model": "auto",
+      "requested_model": "auto",
+      "status": "completed",
+      "conclusion": "success",
+      "classification": "normal",
+      "duration": "5.7m",
+      "action_minutes": 6,
+      "token_usage": 0,
+      "aic": 0,
+      "working_set": {
+        "measurement_state": "unavailable",
+        "cumulative_input_tokens": 0,
+        "peak_input_tokens": 0,
+        "rebuild_excess_tokens": 0,
+        "invocations": 0
+      },
+      "ledger": {
+        "transactions_added": 0
+      },
+      "friction": {
+        "measurement_state": "measured",
+        "canonical_unit": "aic",
+        "sources": [
+          "agent_session",
+          "firewall"
+        ],
+        "total_events": 0,
+        "total_occurrences": 0,
+        "counted_occurrences": 0,
+        "suppressed_occurrences": 0,
+        "cost": {
+          "aic": 0,
+          "tokens": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0,
+            "cache_write": 0,
+            "reasoning": 0,
+            "total": 0
+          },
+          "turns": 0,
+          "tool_calls": 0,
+          "latency_ms": 0
+        },
+        "dimension_states": {
+          "aic": "measured",
+          "latency_ms": "measured",
+          "tokens": "measured",
+          "tool_calls": "measured",
+          "turns": "measured"
+        },
+        "uncertainty": {
+          "aic": {
+            "state": "measured",
+            "method": "direct_record",
+            "confidence": "high",
+            "relative_error": 0,
+            "lower_bound": 0,
+            "upper_bound": 0,
+            "basis": "AI credits of errored invocations (measured), of linked follow-up invocations (causal), or the mean healthy-invocation cost (statistical)"
+          },
+          "latency_ms": {
+            "state": "measured",
+            "method": "direct_record",
+            "confidence": "high",
+            "relative_error": 0,
+            "lower_bound": 0,
+            "upper_bound": 0,
+            "basis": "wall-clock duration recorded on the failing tool call or invocation"
+          },
+          "tokens": {
+            "state": "measured",
+            "method": "direct_record",
+            "confidence": "high",
+            "relative_error": 0,
+            "lower_bound": 0,
+            "upper_bound": 0,
+            "basis": "token classes of the attributed invocations"
+          },
+          "tool_calls": {
+            "state": "measured",
+            "method": "direct_record",
+            "confidence": "high",
+            "relative_error": 0,
+            "lower_bound": 0,
+            "upper_bound": 0,
+            "basis": "counted friction occurrences that consumed a tool call"
+          },
+          "turns": {
+            "state": "measured",
+            "method": "direct_record",
+            "confidence": "high",
+            "relative_error": 0,
+            "lower_bound": 0,
+            "upper_bound": 0,
+            "basis": "one additional turn per errored or retried model invocation"
+          }
+        },
+        "unmeasured_drivers": [
+          {
+            "driver": "agent_api_error",
+            "reason": "source_unavailable:agent_token_usage"
+          },
+          {
+            "driver": "firewall_block",
+            "reason": "no_occurrences"
+          },
+          {
+            "driver": "integrity_filter",
+            "reason": "source_unavailable:mcp_gateway"
+          },
+          {
+            "driver": "mcp_tool_error",
+            "reason": "source_unavailable:mcp_gateway"
+          },
+          {
+            "driver": "session_tool_failure",
+            "reason": "no_occurrences"
+          }
+        ]
+      },
+      "turns": 1,
+      "created_at": "2026-10-25T18:24:06Z",
+      "started_at": "2026-10-25T18:47:45Z",
+      "updated_at": "2026-10-25T18:53:27Z",
+      "url": "https://github.com/ppv-1/rust-sandbox/actions/runs/40221064698",
+      "logs_path": "evals\\golden\\logs\\run-40221064698",
+      "event": "pull_request",
+      "branch": "golden/162746",
+      "head_sha": "8392448de0a186732d5db779197f5ec04ed7f4bf",
+      "display_title": "LLM-policy triage",
+      "repository": "ppv-1/rust-sandbox",
+      "organization": "ppv-1",
+      "ref": "refs/pull/4/merge",
+      "sha": "85785166fd07354de4b702909e9ec82a84c7c2a0",
+      "actor": "ppv-1",
+      "run_attempt": "1",
+      "event_name": "pull_request",
+      "comparison": {
+        "baseline_found": true,
+        "baseline": {
+          "run_id": 40221054505,
+          "workflow_name": "LLM-policy triage",
+          "conclusion": "success",
+          "created_at": "2026-10-25T18:23:58Z",
+          "selection": "cohort_match",
+          "matched_on": [
+            "event",
+            "task_domain",
+            "execution_style",
+            "resource_profile",
+            "actuation_style",
+            "dispatch_mode",
+            "tool_breadth"
+          ]
+        },
+        "delta": {
+          "turns": {
+            "before": 1,
+            "after": 1,
+            "changed": false
+          },
+          "posture": {
+            "before": "read_only",
+            "after": "read_only",
+            "changed": false
+          },
+          "blocked_requests": {
+            "before": 0,
+            "after": 0,
+            "changed": false
+          }
+        },
+        "classification": {
+          "label": "stable"
+        },
+        "recommendation": {
+          "action": "No action needed; this run matches the selected successful baseline closely."
+        }
+      },
+      "task_domain": {
+        "name": "triage",
+        "label": "Triage",
+        "reason": "The run focused on classification, routing, or issue state updates."
+      },
+      "behavior_fingerprint": {
+        "execution_style": "directed",
+        "tool_breadth": "narrow",
+        "actuation_style": "read_only",
+        "resource_profile": "lean",
+        "dispatch_mode": "standalone",
+        "agentic_fraction": 1
+      },
+      "agentic_assessments": [
+        {
+          "kind": "overkill_for_agentic",
+          "severity": "low",
+          "summary": "This Triage run looks stable enough that deterministic automation may be a simpler fit.",
+          "evidence": "turns=1 tool_types=0 actuation=read_only",
+          "recommendation": "Consider whether a scripted rule or deterministic workflow step could replace this agentic path."
+        }
+      ],
+      "github_api_calls": 21,
+      "graders": {
+        "version": 2,
+        "results": [
+          {
+            "id": "artifact-production",
+            "name": "Artifact Production",
+            "status": "pass",
+            "value": 0,
+            "unit": "count",
+            "direction": "higher_is_better"
+          },
+          {
+            "id": "context-growth",
+            "name": "Context Growth",
+            "status": "unavailable",
+            "unit": "factor",
+            "direction": "lower_is_better"
+          },
+          {
+            "id": "execution-duration",
+            "name": "Execution Duration",
+            "status": "unavailable",
+            "unit": "ms",
+            "direction": "lower_is_better"
+          },
+          {
+            "id": "execution-step-count",
+            "name": "Execution Step Count",
+            "status": "unavailable",
+            "unit": "count",
+            "direction": "lower_is_better"
+          },
+          {
+            "id": "loops",
+            "name": "Loops",
+            "status": "pass",
+            "value": 0,
+            "unit": "count",
+            "passed": true,
+            "direction": "lower_is_better",
+            "threshold": 3
+          },
+          {
+            "id": "retries",
+            "name": "Retries",
+            "status": "pass",
+            "value": 0,
+            "unit": "count",
+            "passed": true,
+            "direction": "lower_is_better",
+            "threshold": 10
+          },
+          {
+            "id": "tool-failure-count",
+            "name": "Tool Failure Count",
+            "status": "pass",
+            "value": 0,
+            "unit": "count",
+            "passed": true,
+            "direction": "lower_is_better",
+            "threshold": 5
+          },
+          {
+            "id": "tool-success-rate",
+            "name": "Tool Success Rate",
+            "status": "pass",
+            "value": 1,
+            "unit": "ratio",
+            "passed": true,
+            "direction": "higher_is_better",
+            "threshold": 0.8
+          },
+          {
+            "id": "trajectory-efficiency",
+            "name": "Trajectory Efficiency",
+            "status": "pass",
+            "value": 1,
+            "unit": "ratio",
+            "direction": "higher_is_better"
+          },
+          {
+            "id": "working-set-rebuild-factor",
+            "name": "Working-Set Rebuild Factor",
+            "status": "unavailable",
+            "unit": "factor",
+            "direction": "lower_is_better"
+          }
+        ],
+        "total": 10,
+        "passed": 6,
+        "failed": 0,
+        "error_count": 0,
+        "unavailable_count": 4
+      },
+      "download_duration_ms": 3535,
+      "download_size_bytes": 169470
+    },
+    {
+      "job_count": 6,
+      "run_id": 40221054505,
+      "number": 3,
+      "workflow_name": "LLM-policy triage",
+      "workflow_path": ".github/workflows/llm-triage.lock.yml",
+      "agent": "copilot",
+      "engine": "GitHub Copilot CLI",
+      "engine_id": "copilot",
+      "model": "auto",
+      "requested_model": "auto",
+      "status": "completed",
+      "conclusion": "success",
+      "classification": "baseline",
+      "duration": "7.2m",
+      "action_minutes": 8,
+      "token_usage": 0,
+      "aic": 0,
+      "working_set": {
+        "measurement_state": "unavailable",
+        "cumulative_input_tokens": 0,
+        "peak_input_tokens": 0,
+        "rebuild_excess_tokens": 0,
+        "invocations": 0
+      },
+      "ledger": {
+        "transactions_added": 0
+      },
+      "friction": {
+        "measurement_state": "measured",
+        "canonical_unit": "aic",
+        "sources": [
+          "agent_session",
+          "firewall"
+        ],
+        "total_events": 0,
+        "total_occurrences": 0,
+        "counted_occurrences": 0,
+        "suppressed_occurrences": 0,
+        "cost": {
+          "aic": 0,
+          "tokens": {
+            "input": 0,
+            "output": 0,
+            "cache_read": 0,
+            "cache_write": 0,
+            "reasoning": 0,
+            "total": 0
+          },
+          "turns": 0,
+          "tool_calls": 0,
+          "latency_ms": 0
+        },
+        "dimension_states": {
+          "aic": "measured",
+          "latency_ms": "measured",
+          "tokens": "measured",
+          "tool_calls": "measured",
+          "turns": "measured"
+        },
+        "uncertainty": {
+          "aic": {
+            "state": "measured",
+            "method": "direct_record",
+            "confidence": "high",
+            "relative_error": 0,
+            "lower_bound": 0,
+            "upper_bound": 0,
+            "basis": "AI credits of errored invocations (measured), of linked follow-up invocations (causal), or the mean healthy-invocation cost (statistical)"
+          },
+          "latency_ms": {
+            "state": "measured",
+            "method": "direct_record",
+            "confidence": "high",
+            "relative_error": 0,
+            "lower_bound": 0,
+            "upper_bound": 0,
+            "basis": "wall-clock duration recorded on the failing tool call or invocation"
+          },
+          "tokens": {
+            "state": "measured",
+            "method": "direct_record",
+            "confidence": "high",
+            "relative_error": 0,
+            "lower_bound": 0,
+            "upper_bound": 0,
+            "basis": "token classes of the attributed invocations"
+          },
+          "tool_calls": {
+            "state": "measured",
+            "method": "direct_record",
+            "confidence": "high",
+            "relative_error": 0,
+            "lower_bound": 0,
+            "upper_bound": 0,
+            "basis": "counted friction occurrences that consumed a tool call"
+          },
+          "turns": {
+            "state": "measured",
+            "method": "direct_record",
+            "confidence": "high",
+            "relative_error": 0,
+            "lower_bound": 0,
+            "upper_bound": 0,
+            "basis": "one additional turn per errored or retried model invocation"
+          }
+        },
+        "unmeasured_drivers": [
+          {
+            "driver": "agent_api_error",
+            "reason": "source_unavailable:agent_token_usage"
+          },
+          {
+            "driver": "firewall_block",
+            "reason": "no_occurrences"
+          },
+          {
+            "driver": "integrity_filter",
+            "reason": "source_unavailable:mcp_gateway"
+          },
+          {
+            "driver": "mcp_tool_error",
+            "reason": "source_unavailable:mcp_gateway"
+          },
+          {
+            "driver": "session_tool_failure",
+            "reason": "no_occurrences"
+          }
+        ]
+      },
+      "turns": 1,
+      "created_at": "2026-10-25T18:23:58Z",
+      "started_at": "2026-10-25T18:47:42Z",
+      "updated_at": "2026-10-25T18:54:54Z",
+      "url": "https://github.com/ppv-1/rust-sandbox/actions/runs/40221054505",
+      "logs_path": "evals\\golden\\logs\\run-40221054505",
+      "event": "pull_request",
+      "branch": "golden/161334",
+      "head_sha": "35d70f373d4fcded87db1f0660df9754c75c2a1a",
+      "display_title": "LLM-policy triage",
+      "repository": "ppv-1/rust-sandbox",
+      "organization": "ppv-1",
+      "ref": "refs/pull/3/merge",
+      "sha": "447ea6160a6264a053e3d0384b4743fe855ad510",
+      "actor": "ppv-1",
+      "run_attempt": "1",
+      "event_name": "pull_request",
+      "comparison": {
+        "baseline_found": false
+      },
+      "task_domain": {
+        "name": "triage",
+        "label": "Triage",
+        "reason": "The run focused on classification, routing, or issue state updates."
+      },
+      "behavior_fingerprint": {
+        "execution_style": "directed",
+        "tool_breadth": "narrow",
+        "actuation_style": "read_only",
+        "resource_profile": "lean",
+        "dispatch_mode": "standalone",
+        "agentic_fraction": 1
+      },
+      "agentic_assessments": [
+        {
+          "kind": "overkill_for_agentic",
+          "severity": "low",
+          "summary": "This Triage run looks stable enough that deterministic automation may be a simpler fit.",
+          "evidence": "turns=1 tool_types=0 actuation=read_only",
+          "recommendation": "Consider whether a scripted rule or deterministic workflow step could replace this agentic path."
+        }
+      ],
+      "github_api_calls": 23,
+      "graders": {
+        "version": 2,
+        "results": [
+          {
+            "id": "artifact-production",
+            "name": "Artifact Production",
+            "status": "pass",
+            "value": 0,
+            "unit": "count",
+            "direction": "higher_is_better"
+          },
+          {
+            "id": "context-growth",
+            "name": "Context Growth",
+            "status": "unavailable",
+            "unit": "factor",
+            "direction": "lower_is_better"
+          },
+          {
+            "id": "execution-duration",
+            "name": "Execution Duration",
+            "status": "unavailable",
+            "unit": "ms",
+            "direction": "lower_is_better"
+          },
+          {
+            "id": "execution-step-count",
+            "name": "Execution Step Count",
+            "status": "unavailable",
+            "unit": "count",
+            "direction": "lower_is_better"
+          },
+          {
+            "id": "loops",
+            "name": "Loops",
+            "status": "pass",
+            "value": 0,
+            "unit": "count",
+            "passed": true,
+            "direction": "lower_is_better",
+            "threshold": 3
+          },
+          {
+            "id": "retries",
+            "name": "Retries",
+            "status": "pass",
+            "value": 0,
+            "unit": "count",
+            "passed": true,
+            "direction": "lower_is_better",
+            "threshold": 10
+          },
+          {
+            "id": "tool-failure-count",
+            "name": "Tool Failure Count",
+            "status": "pass",
+            "value": 0,
+            "unit": "count",
+            "passed": true,
+            "direction": "lower_is_better",
+            "threshold": 5
+          },
+          {
+            "id": "tool-success-rate",
+            "name": "Tool Success Rate",
+            "status": "pass",
+            "value": 1,
+            "unit": "ratio",
+            "passed": true,
+            "direction": "higher_is_better",
+            "threshold": 0.8
+          },
+          {
+            "id": "trajectory-efficiency",
+            "name": "Trajectory Efficiency",
+            "status": "pass",
+            "value": 1,
+            "unit": "ratio",
+            "direction": "higher_is_better"
+          },
+          {
+            "id": "working-set-rebuild-factor",
+            "name": "Working-Set Rebuild Factor",
+            "status": "unavailable",
+            "unit": "factor",
+            "direction": "lower_is_better"
+          }
+        ],
+        "total": 10,
+        "passed": 6,
+        "failed": 0,
+        "error_count": 0,
+        "unavailable_count": 4
+      },
+      "download_duration_ms": 3454,
+      "download_size_bytes": 169162
+    }
+  ],
+  "episodes": [],
+  "edges": [],
+  "mcp_tool_usage": {
+    "summary": [
+      {
+        "server_name": "safeoutputs",
+        "tool_name": "add_comment",
+        "call_count": 3,
+        "total_input_size": 1734,
+        "total_output_size": 0,
+        "avg_input_size": 578,
+        "max_input_size": 726,
+        "max_output_size": 0
+      },
+      {
+        "server_name": "safeoutputs",
+        "tool_name": "add_labels",
+        "call_count": 3,
+        "total_input_size": 483,
+        "total_output_size": 0,
+        "avg_input_size": 161,
+        "max_input_size": 167,
+        "max_output_size": 0
+      },
+      {
+        "server_name": "safeoutputs",
+        "tool_name": "noop",
+        "call_count": 1,
+        "total_input_size": 110,
+        "total_output_size": 0,
+        "avg_input_size": 110,
+        "max_input_size": 110,
+        "max_output_size": 0
+      }
+    ],
+    "servers": [
+      {
+        "server_name": "safeoutputs",
+        "tool_call_count": 7,
+        "request_count": 7,
+        "total_input_size": 2327,
+        "total_output_size": 0,
+        "avg_input_size": 332,
+        "max_input_size": 726
+      }
+    ],
+    "tool_calls": [
+      {
+        "tool_call_id": "call-1",
+        "timestamp": "2026-10-26T05:45:49.583Z",
+        "server_name": "safeoutputs",
+        "tool_name": "add_labels",
+        "input_size": 165,
+        "output_size": 0,
+        "status": "incomplete"
+      },
+      {
+        "tool_call_id": "call-2",
+        "timestamp": "2026-10-26T05:45:49.584Z",
+        "server_name": "safeoutputs",
+        "tool_name": "add_comment",
+        "input_size": 396,
+        "output_size": 0,
+        "status": "incomplete"
+      },
+      {
+        "tool_call_id": "call-1",
+        "timestamp": "2026-10-25T18:50:22.759Z",
+        "server_name": "safeoutputs",
+        "tool_name": "add_labels",
+        "input_size": 167,
+        "output_size": 0,
+        "status": "incomplete"
+      },
+      {
+        "tool_call_id": "call-2",
+        "timestamp": "2026-10-25T18:50:22.760Z",
+        "server_name": "safeoutputs",
+        "tool_name": "add_comment",
+        "input_size": 612,
+        "output_size": 0,
+        "status": "incomplete"
+      },
+      {
+        "tool_call_id": "call-1",
+        "timestamp": "2026-10-25T18:50:26.668Z",
+        "server_name": "safeoutputs",
+        "tool_name": "add_labels",
+        "input_size": 151,
+        "output_size": 0,
+        "status": "incomplete"
+      },
+      {
+        "tool_call_id": "call-2",
+        "timestamp": "2026-10-25T18:50:26.669Z",
+        "server_name": "safeoutputs",
+        "tool_name": "add_comment",
+        "input_size": 726,
+        "output_size": 0,
+        "status": "incomplete"
+      },
+      {
+        "tool_call_id": "call-1",
+        "timestamp": "2026-10-25T18:49:53.238Z",
+        "server_name": "safeoutputs",
+        "tool_name": "noop",
+        "input_size": 110,
+        "output_size": 0,
+        "status": "incomplete"
+      }
+    ]
+  },
+  "observability_insights": [
+    {
+      "category": "actuation",
+      "severity": "info",
+      "title": "Actuation mix summarized",
+      "summary": "Across 10 run(s), 3 executed write-capable safe outputs and 7 stayed read-only.",
+      "evidence": "write_runs=3 read_only_runs=7"
+    },
+    {
+      "category": "execution",
+      "severity": "info",
+      "title": "Cross-run log template patterns",
+      "summary": "Mined 2 distinct event templates across 6 pipeline stages from 20 events in 10 runs.",
+      "evidence": "finish=1 plan=1"
+    }
+  ],
+  "firewall_log": {
+    "total_requests": 107,
+    "allowed_requests": 107,
+    "blocked_requests": 0,
+    "allowed_domains": [
+      "api.githubcopilot.com:443"
+    ],
+    "blocked_domains": null,
+    "requests_by_domain": {
+      "api.githubcopilot.com:443": {
+        "allowed": 107,
+        "blocked": 0
+      }
+    },
+    "by_workflow": {
+      "LLM-policy triage": {
+        "allowed_domains": [
+          "api.githubcopilot.com:443"
+        ],
+        "total_requests": 10,
+        "allowed_requests": 10,
+        "blocked_requests": 0,
+        "requests_by_domain": {
+          "api.githubcopilot.com:443": {
+            "allowed": 10,
+            "blocked": 0
+          }
+        }
+      }
+    }
+  },
+  "logs_location": "C:\\Users\\Marcus\\Downloads\\cs467 oss\\cs467 assignment3\\rust-sandbox\\evals\\golden\\logs",
+  "message": "Only the usage artifact was downloaded. Use --artifacts all to download all artifacts, or a specific set such as --artifacts agent, or combinations such as --artifacts agent,firewall.",
+  "github_api_rate_limit": {
+    "host": "github.com",
+    "start": {
+      "limit": 5000,
+      "remaining": 4972,
+      "reset": 1792996727,
+      "used": 28
+    },
+    "end": {
+      "limit": 5000,
+      "remaining": 4961,
+      "reset": 1792996727,
+      "used": 39
+    }
+  }
+}

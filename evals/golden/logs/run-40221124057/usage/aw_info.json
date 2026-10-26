@@ -1,0 +1,59 @@
+{
+  "engine_id": "copilot",
+  "engine_name": "GitHub Copilot CLI",
+  "model": "gpt-4.1",
+  "version": "1.0.101",
+  "agent_version": "1.0.101",
+  "workflow_name": "LLM-policy triage",
+  "workflow_id": "ppv-1/rust-sandbox/.github/workflows/llm-triage.lock.yml@refs/pull/12/merge",
+  "workflow_call_id": "40221124057-2:ppv-1/rust-sandbox/.github/workflows/llm-triage.lock.yml@refs/pull/12/merge",
+  "caller_workflow_ref": "ppv-1/rust-sandbox/.github/workflows/llm-triage.lock.yml@refs/pull/12/merge",
+  "experimental": false,
+  "supports_tools_allowlist": true,
+  "cache_memory": false,
+  "run_id": 40221124057,
+  "run_number": 12,
+  "run_attempt": "2",
+  "repository": "ppv-1/rust-sandbox",
+  "ref": "refs/pull/12/merge",
+  "sha": "4c352dcb20dbe101efdaeb2eefe6baf6fdc0a1c5",
+  "actor": "ppv-1",
+  "event_name": "pull_request",
+  "target_repo": "",
+  "staged": false,
+  "dry_run": false,
+  "allowed_domains": [
+    "defaults"
+  ],
+  "firewall_enabled": true,
+  "awf_version": "v0.28.70",
+  "awmg_version": "",
+  "agent_runtime": "",
+  "steps": {
+    "firewall": "squid"
+  },
+  "created_at": "2026-10-25T18:48:37.573Z",
+  "cli_version": "v0.93.5",
+  "engine_harness": "copilot-cli",
+  "workflow_ref": "ppv-1/rust-sandbox/.github/workflows/llm-triage.lock.yml@refs/pull/12/merge",
+  "server_url": "https://github.com",
+  "model_config": {
+    "routing": {
+      "enabled": false
+    },
+    "models": {
+      "allowed": [],
+      "blocked": []
+    },
+    "max_ai_credits_source": "default",
+    "max_ai_credits": 1000,
+    "baseline_model": "gpt-4.1"
+  },
+  "requested_model": "gpt-4.1",
+  "model_selection": {
+    "status": "observed",
+    "configured_model": "gpt-4.1",
+    "resolved_model": "gpt-4.1",
+    "effective_model": "gpt-4.1"
+  }
+}

@@ -19,14 +19,15 @@ into a comment.
 
 ## Procedure
 
-1. **Run the scanner** (no model judgement in it):
-   `python3 .claude/skills/llm-triage/scan_pr.py --from-json /tmp/gh-aw/agent/pr.json`
-   (the workflow writes that file; for a dry run, `evals/golden/seed.sh --dry-run <ID>` does).
+1. **Read the scanner output** with `cat /tmp/gh-aw/agent/scan.json`. The workflow
+   runs `scan_pr.py` (no model judgement in it) before you start; for a dry run,
+   `evals/golden/seed.sh --dry-run <ID>` writes the same file. Do not run the
+   scanner yourself. If the file is missing, call `noop` with the error and stop.
 
    If `is_bot` is `true`, call `noop` with `skipped: bot author` and stop.
 
-2. **Read** the PR title, description and commit messages, from
-   `/tmp/gh-aw/agent/pr.json` or the GitHub pull-request tools.
+2. **Read** the PR title, description and commit messages with
+   `cat /tmp/gh-aw/agent/pr.json`.
 
 3. **Classify LLM use** as exactly one of:
    - `llm-created`: an LLM wrote any of the code, docs, diagnostics or description.

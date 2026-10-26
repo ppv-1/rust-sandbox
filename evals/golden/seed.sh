@@ -5,7 +5,7 @@
 #
 #   evals/golden/seed.sh                 seed every case
 #   evals/golden/seed.sh <ID>            seed one case
-#   evals/golden/seed.sh --dry-run <ID>  only write /tmp/gh-aw/agent/pr.json for a dry run
+#   evals/golden/seed.sh --dry-run <ID>  only write /tmp/gh-aw/agent/{pr,scan}.json for a dry run
 #
 # Run from a clean checkout of main in the sandbox repo, after cases.json is committed.
 # Needs git, gh (authenticated to the sandbox repo) and python3 (or set PYTHON).
@@ -91,7 +91,8 @@ if [ "${1:-}" = "--dry-run" ]; then
   prepare "$2" "$dir"
   mkdir -p /tmp/gh-aw/agent
   cp "$dir/pr.json" /tmp/gh-aw/agent/pr.json
-  echo "wrote /tmp/gh-aw/agent/pr.json for case $2"
+  "$PY" .claude/skills/llm-triage/scan_pr.py --from-json /tmp/gh-aw/agent/pr.json > /tmp/gh-aw/agent/scan.json
+  echo "wrote /tmp/gh-aw/agent/pr.json and scan.json for case $2"
   exit 0
 fi
 
