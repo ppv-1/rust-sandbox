@@ -46,20 +46,17 @@ into a comment.
    the description names a person who agreed to review it. A plain `cc @name`,
    a team ping, or triagebot's automatic assignment is `no`.
 
-5. **Apply the decision table.**
+5. **Decide**, in this order, and write the result as one line before calling any tool:
+   `llm_use=<class> reviewer=<yes|no> sensitive=<n> actions=<label,comment|label|comment|none>`
 
-   | LLM use | Reviewer pre-arranged | `sensitive_paths` | Action |
-   |---|---|---|---|
-   | `none` or `private-use` | any | any | `noop` |
-   | `llm-created` | yes | empty | label |
-   | `llm-created` | no | any | label + comment |
-   | `llm-created` | yes | not empty | label + comment |
-
-   - "label" means `add_labels` with `["llm-assisted"]`, and only if
-     `already_labelled` is `false`. Never use a label that is not in `allowed_labels`.
-   - "comment" means one `add_comment` using the template below.
-   - For `noop`, give a one-line reason in this form:
-     `llm_use=<class> reviewer=<yes|no> sensitive=<n> action=none`.
+   - If LLM use is `none` or `private-use`: `actions=none`. Call `noop` with that line and stop.
+   - Otherwise (`llm-created`), check two things separately:
+     - **Label:** add it unless `already_labelled` is `true`.
+     - **Comment:** post it if reviewer is `no`, OR `sensitive_paths` is not empty.
+       An `llm-created` PR with no `r?` needs BOTH the label and the comment.
+   - Call every tool named in `actions` before finishing:
+     "label" is `add_labels` with `["llm-assisted"]` (never any label outside
+     `allowed_labels`); "comment" is one `add_comment` using the template below.
 
 ## Comment template
 

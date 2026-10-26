@@ -57,6 +57,19 @@ not supported`). Every agent job failed before reading the PR. Fix: repo variabl
 branch's copy of `scan_pr.py`, and writes `/tmp/gh-aw/agent/scan.json`. The agent only gets
 `cat`, and the prompt requires loading the skill and reading both files before any safe output.
 
+**Run 3 (2026-10-26, #19 = 164064, scanner in pre-step): correct facts, wrong action.**
+The agent loaded the skill, read `scan.json`, and classified correctly
+(`llm_use=llm-created reviewer=no sensitive=0`), but wrote `action=label` and only called
+`add_labels`. Expected label + comment. The safe-output job applied the label and failed
+nothing; the comment was simply never requested. gpt-4.1 misread the 4-row decision table.
+Separately, a run 2 comment showed gh-aw redacting the policy link
+(`forge.rustlang.org/redacted`) because the domain was not in `network.allowed`.
+
+**Fix for run 4:** the table was replaced with two explicit, separate checks (label; then
+comment if no reviewer or sensitive paths), and the agent must write the `actions=` line and
+call every tool in it. `forge.rust-lang.org` and `rust-lang.zulipchat.com` were added to
+`network.allowed`.
+
 Explain every row where Pass is "no".
 
 ## Reproduce end to end
