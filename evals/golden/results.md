@@ -70,6 +70,16 @@ comment if no reviewer or sensitive paths), and the agent must write the `action
 call every tool in it. `forge.rust-lang.org` and `rust-lang.zulipchat.com` were added to
 `network.allowed`.
 
+**Run 4 (2026-10-26, #20 = 164064, explicit two-check rule): same miss.** The agent again
+classified correctly and then wrote "No comment needed: no reviewer pre-arranged and no
+sensitive paths", contradicting the rule it had just stated. gpt-4.1 reliably inverted
+this condition, so prompt wording alone could not fix it.
+
+**Fix for run 5:** `scan_pr.py` now computes `if_llm_created` (label unless already
+labelled; comment if no `r?` or any sensitive path). The model only judges LLM use and then
+does exactly what that list says. Trade-off: a reviewer named only in prose (no `r?`) now
+still gets the reviewer bullet; none of the golden cases relies on that.
+
 Explain every row where Pass is "no".
 
 ## Reproduce end to end

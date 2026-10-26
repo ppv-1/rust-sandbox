@@ -42,21 +42,17 @@ into a comment.
    Use only explicit statements and markers. Never infer LLM use from writing
    style, formatting, headings, tables or code quality.
 
-4. **Judge whether a reviewer was pre-arranged**: `yes` if `r_question` is set or
-   the description names a person who agreed to review it. A plain `cc @name`,
-   a team ping, or triagebot's automatic assignment is `no`.
+4. **Act.** You do not decide the actions yourself: the scanner already lists them
+   in `if_llm_created` (it checks `r_question` and `sensitive_paths`).
 
-5. **Decide**, in this order, and write the result as one line before calling any tool:
-   `llm_use=<class> reviewer=<yes|no> sensitive=<n> actions=<label,comment|label|comment|none>`
-
-   - If LLM use is `none` or `private-use`: `actions=none`. Call `noop` with that line and stop.
-   - Otherwise (`llm-created`), check two things separately:
-     - **Label:** add it unless `already_labelled` is `true`.
-     - **Comment:** post it if reviewer is `no`, OR `sensitive_paths` is not empty.
-       An `llm-created` PR with no `r?` needs BOTH the label and the comment.
-   - Call every tool named in `actions` before finishing:
-     "label" is `add_labels` with `["llm-assisted"]` (never any label outside
-     `allowed_labels`); "comment" is one `add_comment` using the template below.
+   - If LLM use is `none` or `private-use`: call `noop` with
+     `llm_use=<class> actions=none` and stop.
+   - If LLM use is `llm-created`: do **exactly** what `if_llm_created` lists, nothing
+     more and nothing less, then call `noop` with `llm_use=llm-created actions=<that list>`.
+     - `"label"`: call `add_labels` with `["llm-assisted"]`.
+     - `"comment"`: call `add_comment` with the template below. Keep the reviewer
+       bullet if `r_question` is null, and the soundness bullet if `sensitive_paths`
+       is not empty.
 
 ## Comment template
 

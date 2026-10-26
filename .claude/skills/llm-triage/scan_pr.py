@@ -91,6 +91,13 @@ def scan(pr):
     sensitive = [p for p in paths if any(re.search(s, p) for s in SENSITIVE_PATHS)]
 
     labels = [l.get("name") for l in pr.get("labels") or []]
+    already_labelled = "llm-assisted" in labels
+
+    # What to do if the agent judges the PR llm-created. Deterministic, so the
+    # model does not have to evaluate the reviewer/sensitive-path rule itself.
+    if_llm_created = [] if already_labelled else ["label"]
+    if r_match is None or sensitive:
+        if_llm_created.append("comment")
 
     return {
         "number": pr.get("number"),
@@ -100,8 +107,9 @@ def scan(pr):
         "r_question": r_match.group(1) if r_match else None,
         "is_bot": is_bot,
         "sensitive_paths": sensitive,
-        "already_labelled": "llm-assisted" in labels,
+        "already_labelled": already_labelled,
         "allowed_labels": ALLOWED_LABELS,
+        "if_llm_created": if_llm_created,
     }
 
 
