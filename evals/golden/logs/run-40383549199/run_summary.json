@@ -1,0 +1,1859 @@
+{
+  "cli_version": "v0.93.5",
+  "run_id": 40383549199,
+  "processed_at": "2026-10-27T03:15:15.6691545+08:00",
+  "run": {
+    "databaseId": 40383549199,
+    "number": 22,
+    "url": "https://github.com/ppv-1/rust-sandbox/actions/runs/40383549199",
+    "status": "completed",
+    "conclusion": "success",
+    "workflowName": "LLM-policy triage",
+    "workflowPath": ".github/workflows/llm-triage.lock.yml",
+    "createdAt": "2026-10-26T19:05:22Z",
+    "startedAt": "2026-10-26T19:05:22Z",
+    "updatedAt": "2026-10-26T19:11:14Z",
+    "event": "pull_request",
+    "headBranch": "golden/160925",
+    "headSha": "09d073b1c9140297bd62adeaed6417f2cbd4f1d7",
+    "displayTitle": "LLM-policy triage",
+    "attempt": 1,
+    "repository": "ppv-1/rust-sandbox",
+    "actor": "ppv-1",
+    "Duration": 352000000000,
+    "ActionMinutes": 6,
+    "TokenUsage": 20081,
+    "Turns": 1,
+    "TurnsAvailable": true,
+    "ErrorCount": 0,
+    "WarningCount": 0,
+    "MissingToolCount": 0,
+    "MissingDataCount": 0,
+    "NoopCount": 0,
+    "safe_items_count": 2,
+    "AvgTimeBetweenTurns": 0,
+    "LogsPath": "evals\\golden\\logs\\run-40383549199",
+    "DownloadDuration": 3442398100,
+    "DownloadSizeBytes": 262684
+  },
+  "metrics": {
+    "TokenUsage": 20081,
+    "EstimatedCost": 0,
+    "Turns": 0,
+    "ToolCalls": null,
+    "ToolSequences": null,
+    "AvgTimeBetweenTurns": 0,
+    "MaxTimeBetweenTurns": 0,
+    "MedianTimeBetweenTurns": 0,
+    "StdDevTimeBetweenTurns": 0
+  },
+  "task_domain": {
+    "name": "triage",
+    "label": "Triage",
+    "reason": "The run focused on classification, routing, or issue state updates."
+  },
+  "behavior_fingerprint": {
+    "execution_style": "directed",
+    "tool_breadth": "narrow",
+    "actuation_style": "selective_write",
+    "resource_profile": "moderate",
+    "dispatch_mode": "standalone",
+    "agentic_fraction": 1
+  },
+  "agentic_assessments": [
+    {
+      "kind": "model_downgrade_available",
+      "severity": "low",
+      "summary": "This Triage run may not need a frontier model. A smaller model (e.g. gpt-4.1-mini, claude-haiku-4-5) could handle the task at lower cost.",
+      "evidence": "domain=triage resource_profile=moderate actuation=selective_write",
+      "recommendation": "Try engine.model: gpt-4.1-mini or claude-haiku-4-5 in the workflow frontmatter."
+    }
+  ],
+  "access_analysis": null,
+  "firewall_analysis": {
+    "allowed_domains": [
+      "api.githubcopilot.com:443"
+    ],
+    "total_requests": 20,
+    "allowed_requests": 20,
+    "blocked_requests": 0,
+    "requests_by_domain": {
+      "api.githubcopilot.com:443": {
+        "allowed": 20,
+        "blocked": 0
+      }
+    }
+  },
+  "redacted_domains_analysis": null,
+  "missing_tools": null,
+  "missing_data": null,
+  "noops": null,
+  "mcp_failures": null,
+  "skill_activations": [
+    {
+      "name": "llm-triage",
+      "status": "invoked",
+      "source": "usage_summary",
+      "invocation_count": 1,
+      "timestamp": "2026-10-26T19:07:15.146Z",
+      "workflow_name": "LLM-policy triage",
+      "run_id": 40383549199
+    }
+  ],
+  "mcp_tool_usage": {
+    "summary": [
+      {
+        "server_name": "safeoutputs",
+        "tool_name": "add_comment",
+        "call_count": 1,
+        "total_input_size": 639,
+        "total_output_size": 0,
+        "avg_input_size": 639,
+        "max_input_size": 639,
+        "max_output_size": 0
+      },
+      {
+        "server_name": "safeoutputs",
+        "tool_name": "add_labels",
+        "call_count": 1,
+        "total_input_size": 219,
+        "total_output_size": 0,
+        "avg_input_size": 219,
+        "max_input_size": 219,
+        "max_output_size": 0
+      },
+      {
+        "server_name": "safeoutputs",
+        "tool_name": "noop",
+        "call_count": 1,
+        "total_input_size": 65,
+        "total_output_size": 0,
+        "avg_input_size": 65,
+        "max_input_size": 65,
+        "max_output_size": 0
+      }
+    ],
+    "tool_calls": [
+      {
+        "tool_call_id": "call-1",
+        "timestamp": "2026-10-26T19:08:11.348Z",
+        "server_name": "safeoutputs",
+        "tool_name": "add_labels",
+        "input_size": 219,
+        "output_size": 0,
+        "status": "incomplete"
+      },
+      {
+        "tool_call_id": "call-2",
+        "timestamp": "2026-10-26T19:08:11.349Z",
+        "server_name": "safeoutputs",
+        "tool_name": "add_comment",
+        "input_size": 639,
+        "output_size": 0,
+        "status": "incomplete"
+      },
+      {
+        "tool_call_id": "call-3",
+        "timestamp": "2026-10-26T19:08:14.680Z",
+        "server_name": "safeoutputs",
+        "tool_name": "noop",
+        "input_size": 65,
+        "output_size": 0,
+        "status": "incomplete"
+      }
+    ],
+    "servers": [
+      {
+        "server_name": "safeoutputs",
+        "tool_call_count": 3,
+        "request_count": 3,
+        "total_input_size": 923,
+        "total_output_size": 0,
+        "avg_input_size": 308,
+        "max_input_size": 639
+      }
+    ]
+  },
+  "token_usage_summary": {
+    "total_input_tokens": 19653,
+    "total_output_tokens": 428,
+    "total_cache_read_tokens": 74368,
+    "total_cache_write_tokens": 0,
+    "total_requests": 5,
+    "total_duration_ms": 70133,
+    "total_response_bytes": 87386,
+    "cache_efficiency": 0,
+    "total_aic": 7.9914,
+    "ambient_context": {
+      "input_tokens": 17227,
+      "cached_tokens": 0
+    },
+    "by_model": {
+      "gpt-4.1-2025-04-14": {
+        "provider": "copilot",
+        "input_tokens": 19653,
+        "output_tokens": 428,
+        "cache_read_tokens": 74368,
+        "cache_write_tokens": 0,
+        "requests": 5,
+        "duration_ms": 70133,
+        "response_bytes": 87386,
+        "aic": 7.9914000000000005
+      }
+    },
+    "agent_usage": [
+      {
+        "agent_name": "main",
+        "agent_type": "main",
+        "source_engine": "copilot",
+        "instance_count": 1,
+        "served_models": [
+          "gpt-4.1",
+          "gpt-4.1-2025-04-14"
+        ],
+        "requests": 5,
+        "input_tokens": 94021,
+        "output_tokens": 428,
+        "cache_read_tokens": 74368,
+        "cache_write_tokens": 0,
+        "total_api_duration_ms": 70177,
+        "models": [
+          {
+            "model": "gpt-4.1",
+            "resolved_model": "gpt-4.1",
+            "requests": 5,
+            "input_tokens": 94021,
+            "output_tokens": 428,
+            "cache_read_tokens": 74368,
+            "cache_write_tokens": 0
+          }
+        ]
+      }
+    ]
+  },
+  "working_set": {
+    "measurement_state": "measured",
+    "rebuild_factor": 1.1408254484239857,
+    "cumulative_input_tokens": 19653,
+    "peak_input_tokens": 17227,
+    "rebuild_excess_tokens": 2426,
+    "invocations": 5
+  },
+  "ledger": {
+    "transactions_added": 0
+  },
+  "friction": {
+    "measurement_state": "measured",
+    "canonical_unit": "aic",
+    "sources": [
+      "agent_session",
+      "agent_token_usage",
+      "firewall",
+      "mcp_gateway"
+    ],
+    "total_events": 0,
+    "total_occurrences": 0,
+    "counted_occurrences": 0,
+    "suppressed_occurrences": 0,
+    "cost": {
+      "aic": 0,
+      "tokens": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0,
+        "reasoning": 0,
+        "total": 0
+      },
+      "turns": 0,
+      "tool_calls": 0,
+      "latency_ms": 0
+    },
+    "total_run_aic": 7.9914000000000005,
+    "friction_ratio": 0,
+    "dimension_states": {
+      "aic": "measured",
+      "latency_ms": "measured",
+      "tokens": "measured",
+      "tool_calls": "measured",
+      "turns": "measured"
+    },
+    "uncertainty": {
+      "aic": {
+        "state": "measured",
+        "method": "direct_record",
+        "confidence": "high",
+        "relative_error": 0,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "sample_size": 5,
+        "basis": "AI credits of errored invocations (measured), of linked follow-up invocations (causal), or the mean healthy-invocation cost (statistical)"
+      },
+      "latency_ms": {
+        "state": "measured",
+        "method": "direct_record",
+        "confidence": "high",
+        "relative_error": 0,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "basis": "wall-clock duration recorded on the failing tool call or invocation"
+      },
+      "tokens": {
+        "state": "measured",
+        "method": "direct_record",
+        "confidence": "high",
+        "relative_error": 0,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "sample_size": 5,
+        "basis": "token classes of the attributed invocations"
+      },
+      "tool_calls": {
+        "state": "measured",
+        "method": "direct_record",
+        "confidence": "high",
+        "relative_error": 0,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "basis": "counted friction occurrences that consumed a tool call"
+      },
+      "turns": {
+        "state": "measured",
+        "method": "direct_record",
+        "confidence": "high",
+        "relative_error": 0,
+        "lower_bound": 0,
+        "upper_bound": 0,
+        "basis": "one additional turn per errored or retried model invocation"
+      }
+    },
+    "unmeasured_drivers": [
+      {
+        "driver": "agent_api_error",
+        "reason": "no_occurrences"
+      },
+      {
+        "driver": "firewall_block",
+        "reason": "no_occurrences"
+      },
+      {
+        "driver": "integrity_filter",
+        "reason": "no_occurrences"
+      },
+      {
+        "driver": "mcp_tool_error",
+        "reason": "no_occurrences"
+      },
+      {
+        "driver": "session_tool_failure",
+        "reason": "no_occurrences"
+      }
+    ]
+  },
+  "github_rate_limit_usage": {
+    "total_requests_made": 30,
+    "core_consumed": 20,
+    "core_consumed_source": "response_headers_delta",
+    "core_remaining": 4980,
+    "core_limit": 5000,
+    "resources": [
+      {
+        "resource": "core",
+        "requests_made": 30,
+        "quota_consumed": 20,
+        "final_remaining": 4980,
+        "limit": 5000
+      },
+      {
+        "resource": "source_import",
+        "requests_made": 0,
+        "quota_consumed": 0,
+        "final_remaining": 100,
+        "limit": 100
+      },
+      {
+        "resource": "audit_log_streaming",
+        "requests_made": 0,
+        "quota_consumed": 0,
+        "final_remaining": 15,
+        "limit": 15
+      },
+      {
+        "resource": "search",
+        "requests_made": 0,
+        "quota_consumed": 0,
+        "final_remaining": 30,
+        "limit": 30
+      },
+      {
+        "resource": "graphql",
+        "requests_made": 0,
+        "quota_consumed": 0,
+        "final_remaining": 5000,
+        "limit": 5000
+      },
+      {
+        "resource": "integration_manifest",
+        "requests_made": 0,
+        "quota_consumed": 0,
+        "final_remaining": 5000,
+        "limit": 5000
+      },
+      {
+        "resource": "code_search",
+        "requests_made": 0,
+        "quota_consumed": 0,
+        "final_remaining": 10,
+        "limit": 10
+      },
+      {
+        "resource": "code_scanning_autofix",
+        "requests_made": 0,
+        "quota_consumed": 0,
+        "final_remaining": 10,
+        "limit": 10
+      },
+      {
+        "resource": "enterprise_token_inventory",
+        "requests_made": 0,
+        "quota_consumed": 0,
+        "final_remaining": 1750,
+        "limit": 1750
+      },
+      {
+        "resource": "copilot_usage_records",
+        "requests_made": 0,
+        "quota_consumed": 0,
+        "final_remaining": 1750,
+        "limit": 1750
+      },
+      {
+        "resource": "dependency_sbom",
+        "requests_made": 0,
+        "quota_consumed": 0,
+        "final_remaining": 100,
+        "limit": 100
+      },
+      {
+        "resource": "audit_log",
+        "requests_made": 0,
+        "quota_consumed": 0,
+        "final_remaining": 1750,
+        "limit": 1750
+      },
+      {
+        "resource": "actions_runner_registration",
+        "requests_made": 0,
+        "quota_consumed": 0,
+        "final_remaining": 10000,
+        "limit": 10000
+      },
+      {
+        "resource": "scim",
+        "requests_made": 0,
+        "quota_consumed": 0,
+        "final_remaining": 15000,
+        "limit": 15000
+      },
+      {
+        "resource": "dependency_snapshots",
+        "requests_made": 0,
+        "quota_consumed": 0,
+        "final_remaining": 100,
+        "limit": 100
+      }
+    ]
+  },
+  "job_details": [
+    {
+      "id": 121785794996,
+      "run_id": 40383549199,
+      "run_url": "https://api.github.com/repos/ppv-1/rust-sandbox/actions/runs/40383549199",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVVzeqM8AAAAcWv_BtA",
+      "head_sha": "09d073b1c9140297bd62adeaed6417f2cbd4f1d7",
+      "url": "https://api.github.com/repos/ppv-1/rust-sandbox/actions/jobs/121785794996",
+      "html_url": "https://github.com/ppv-1/rust-sandbox/actions/runs/40383549199/job/121785794996",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-26T19:05:23Z",
+      "started_at": "2026-10-26T19:05:25Z",
+      "completed_at": "2026-10-26T19:05:34Z",
+      "name": "pre_activation",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-26T19:05:27Z",
+          "completed_at": "2026-10-26T19:05:29Z"
+        },
+        {
+          "name": "Setup Scripts",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-26T19:05:29Z",
+          "completed_at": "2026-10-26T19:05:32Z"
+        },
+        {
+          "name": "Check team membership for workflow",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-26T19:05:32Z",
+          "completed_at": "2026-10-26T19:05:32Z"
+        },
+        {
+          "name": "Post Setup Scripts",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-26T19:05:32Z",
+          "completed_at": "2026-10-26T19:05:32Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-26T19:05:32Z",
+          "completed_at": "2026-10-26T19:05:32Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/ppv-1/rust-sandbox/check-runs/121785794996",
+      "labels": [
+        "ubuntu-slim"
+      ],
+      "runner_id": 1000000348,
+      "runner_name": "GitHub Actions 1000000348",
+      "runner_group_name": "GitHub Actions",
+      "workflow_name": "LLM-policy triage",
+      "head_branch": "golden/160925",
+      "Duration": 9000000000
+    },
+    {
+      "id": 121785893006,
+      "run_id": 40383549199,
+      "run_url": "https://api.github.com/repos/ppv-1/rust-sandbox/actions/runs/40383549199",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVVzeqM8AAAAcWwFAjg",
+      "head_sha": "09d073b1c9140297bd62adeaed6417f2cbd4f1d7",
+      "url": "https://api.github.com/repos/ppv-1/rust-sandbox/actions/jobs/121785893006",
+      "html_url": "https://github.com/ppv-1/rust-sandbox/actions/runs/40383549199/job/121785893006",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-26T19:05:34Z",
+      "started_at": "2026-10-26T19:05:37Z",
+      "completed_at": "2026-10-26T19:06:08Z",
+      "name": "activation",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-26T19:05:39Z",
+          "completed_at": "2026-10-26T19:05:41Z"
+        },
+        {
+          "name": "Setup Scripts",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-26T19:05:41Z",
+          "completed_at": "2026-10-26T19:05:44Z"
+        },
+        {
+          "name": "Mask OTLP telemetry headers",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-26T19:05:44Z",
+          "completed_at": "2026-10-26T19:05:44Z"
+        },
+        {
+          "name": "Generate agentic run info",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-26T19:05:44Z",
+          "completed_at": "2026-10-26T19:05:44Z"
+        },
+        {
+          "name": "Restore daily AIC scan observations",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-26T19:05:44Z",
+          "completed_at": "2026-10-26T19:05:45Z"
+        },
+        {
+          "name": "Check daily workflow token guardrail",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-26T19:05:45Z",
+          "completed_at": "2026-10-26T19:05:58Z"
+        },
+        {
+          "name": "Publish daily AIC scan observations",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-26T19:05:58Z",
+          "completed_at": "2026-10-26T19:05:59Z"
+        },
+        {
+          "name": "Validate COPILOT_GITHUB_TOKEN secret",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-26T19:05:59Z",
+          "completed_at": "2026-10-26T19:05:59Z"
+        },
+        {
+          "name": "Check for OAuth tokens",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-26T19:05:59Z",
+          "completed_at": "2026-10-26T19:05:59Z"
+        },
+        {
+          "name": "Checkout .github and .agents folders",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-26T19:05:59Z",
+          "completed_at": "2026-10-26T19:06:01Z"
+        },
+        {
+          "name": "Save agent config folders for base branch restoration",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-26T19:06:01Z",
+          "completed_at": "2026-10-26T19:06:01Z"
+        },
+        {
+          "name": "Check workflow lock file",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-10-26T19:06:01Z",
+          "completed_at": "2026-10-26T19:06:02Z"
+        },
+        {
+          "name": "Check compile-agentic version",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-26T19:06:02Z",
+          "completed_at": "2026-10-26T19:06:02Z"
+        },
+        {
+          "name": "Compute current body text",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-10-26T19:06:02Z",
+          "completed_at": "2026-10-26T19:06:02Z"
+        },
+        {
+          "name": "Log runtime features",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 15,
+          "started_at": "2026-10-26T19:06:02Z",
+          "completed_at": "2026-10-26T19:06:02Z"
+        },
+        {
+          "name": "Create prompt with built-in context",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-10-26T19:06:02Z",
+          "completed_at": "2026-10-26T19:06:02Z"
+        },
+        {
+          "name": "Interpolate variables and render templates",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-10-26T19:06:02Z",
+          "completed_at": "2026-10-26T19:06:03Z"
+        },
+        {
+          "name": "Substitute placeholders",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 18,
+          "started_at": "2026-10-26T19:06:03Z",
+          "completed_at": "2026-10-26T19:06:03Z"
+        },
+        {
+          "name": "Validate prompt placeholders",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19,
+          "started_at": "2026-10-26T19:06:03Z",
+          "completed_at": "2026-10-26T19:06:03Z"
+        },
+        {
+          "name": "Print prompt",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 20,
+          "started_at": "2026-10-26T19:06:03Z",
+          "completed_at": "2026-10-26T19:06:03Z"
+        },
+        {
+          "name": "Inventory installed skills",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 21,
+          "started_at": "2026-10-26T19:06:03Z",
+          "completed_at": "2026-10-26T19:06:03Z"
+        },
+        {
+          "name": "Upload info artifact",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 22,
+          "started_at": "2026-10-26T19:06:03Z",
+          "completed_at": "2026-10-26T19:06:04Z"
+        },
+        {
+          "name": "Stage prompt files for artifact upload",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 23,
+          "started_at": "2026-10-26T19:06:04Z",
+          "completed_at": "2026-10-26T19:06:04Z"
+        },
+        {
+          "name": "Upload activation artifact",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 24,
+          "started_at": "2026-10-26T19:06:04Z",
+          "completed_at": "2026-10-26T19:06:06Z"
+        },
+        {
+          "name": "Post Checkout .github and .agents folders",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 47,
+          "started_at": "2026-10-26T19:06:06Z",
+          "completed_at": "2026-10-26T19:06:06Z"
+        },
+        {
+          "name": "Post Setup Scripts",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 48,
+          "started_at": "2026-10-26T19:06:06Z",
+          "completed_at": "2026-10-26T19:06:06Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 49,
+          "started_at": "2026-10-26T19:06:06Z",
+          "completed_at": "2026-10-26T19:06:06Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/ppv-1/rust-sandbox/check-runs/121785893006",
+      "labels": [
+        "ubuntu-slim"
+      ],
+      "runner_id": 1000000349,
+      "runner_name": "GitHub Actions 1000000349",
+      "runner_group_name": "GitHub Actions",
+      "workflow_name": "LLM-policy triage",
+      "head_branch": "golden/160925",
+      "Duration": 31000000000
+    },
+    {
+      "id": 121786201864,
+      "run_id": 40383549199,
+      "run_url": "https://api.github.com/repos/ppv-1/rust-sandbox/actions/runs/40383549199",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVVzeqM8AAAAcWwX3CA",
+      "head_sha": "09d073b1c9140297bd62adeaed6417f2cbd4f1d7",
+      "url": "https://api.github.com/repos/ppv-1/rust-sandbox/actions/jobs/121786201864",
+      "html_url": "https://github.com/ppv-1/rust-sandbox/actions/runs/40383549199/job/121786201864",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-26T19:06:09Z",
+      "started_at": "2026-10-26T19:06:11Z",
+      "completed_at": "2026-10-26T19:08:30Z",
+      "name": "agent",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-26T19:06:11Z",
+          "completed_at": "2026-10-26T19:06:13Z"
+        },
+        {
+          "name": "Setup Scripts",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-26T19:06:13Z",
+          "completed_at": "2026-10-26T19:06:17Z"
+        },
+        {
+          "name": "Set runtime paths",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-26T19:06:17Z",
+          "completed_at": "2026-10-26T19:06:17Z"
+        },
+        {
+          "name": "Mask OTLP telemetry headers",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-26T19:06:17Z",
+          "completed_at": "2026-10-26T19:06:17Z"
+        },
+        {
+          "name": "Check OTLP telemetry configuration",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-26T19:06:17Z",
+          "completed_at": "2026-10-26T19:06:17Z"
+        },
+        {
+          "name": "Checkout repository (gh-aw default)",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-26T19:06:17Z",
+          "completed_at": "2026-10-26T19:06:18Z"
+        },
+        {
+          "name": "Initialize agent execution evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-26T19:06:18Z",
+          "completed_at": "2026-10-26T19:06:18Z"
+        },
+        {
+          "name": "Create gh-aw temp directory",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-26T19:06:18Z",
+          "completed_at": "2026-10-26T19:06:18Z"
+        },
+        {
+          "name": "Configure gh CLI for GitHub Enterprise",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-26T19:06:18Z",
+          "completed_at": "2026-10-26T19:06:18Z"
+        },
+        {
+          "name": "Download activation artifact",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-26T19:06:18Z",
+          "completed_at": "2026-10-26T19:06:19Z"
+        },
+        {
+          "name": "Fetch PR data and run scan_pr.py",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-26T19:06:19Z",
+          "completed_at": "2026-10-26T19:06:20Z"
+        },
+        {
+          "name": "Configure Git credentials",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-10-26T19:06:20Z",
+          "completed_at": "2026-10-26T19:06:20Z"
+        },
+        {
+          "name": "Checkout PR branch",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-26T19:06:20Z",
+          "completed_at": "2026-10-26T19:06:20Z"
+        },
+        {
+          "name": "Install GitHub Copilot CLI",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-10-26T19:06:20Z",
+          "completed_at": "2026-10-26T19:06:23Z"
+        },
+        {
+          "name": "Install AWF binary",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-10-26T19:06:23Z",
+          "completed_at": "2026-10-26T19:06:25Z"
+        },
+        {
+          "name": "Determine automatic lockdown mode for GitHub MCP Server",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-10-26T19:06:25Z",
+          "completed_at": "2026-10-26T19:06:26Z"
+        },
+        {
+          "name": "Restore agent config folders from base branch",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-10-26T19:06:26Z",
+          "completed_at": "2026-10-26T19:06:26Z"
+        },
+        {
+          "name": "Restore inline sub-agents from activation artifact",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 18,
+          "started_at": "2026-10-26T19:06:26Z",
+          "completed_at": "2026-10-26T19:06:26Z"
+        },
+        {
+          "name": "Restore inline skills from activation artifact",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19,
+          "started_at": "2026-10-26T19:06:26Z",
+          "completed_at": "2026-10-26T19:06:26Z"
+        },
+        {
+          "name": "Download container images",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 20,
+          "started_at": "2026-10-26T19:06:26Z",
+          "completed_at": "2026-10-26T19:06:41Z"
+        },
+        {
+          "name": "Prepare Safe Outputs Directories",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 21,
+          "started_at": "2026-10-26T19:06:41Z",
+          "completed_at": "2026-10-26T19:06:41Z"
+        },
+        {
+          "name": "Generate Safe Outputs Config",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 22,
+          "started_at": "2026-10-26T19:06:41Z",
+          "completed_at": "2026-10-26T19:06:41Z"
+        },
+        {
+          "name": "Generate Safe Outputs Tools",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 23,
+          "started_at": "2026-10-26T19:06:41Z",
+          "completed_at": "2026-10-26T19:06:41Z"
+        },
+        {
+          "name": "Start MCP Gateway",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 24,
+          "started_at": "2026-10-26T19:06:41Z",
+          "completed_at": "2026-10-26T19:06:47Z"
+        },
+        {
+          "name": "Mount MCP servers as CLIs",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 25,
+          "started_at": "2026-10-26T19:06:47Z",
+          "completed_at": "2026-10-26T19:06:47Z"
+        },
+        {
+          "name": "Clean credentials",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 26,
+          "started_at": "2026-10-26T19:06:47Z",
+          "completed_at": "2026-10-26T19:06:47Z"
+        },
+        {
+          "name": "Audit pre-agent workspace",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 27,
+          "started_at": "2026-10-26T19:06:47Z",
+          "completed_at": "2026-10-26T19:06:47Z"
+        },
+        {
+          "name": "Log GitHub rate limits at agent start",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 28,
+          "started_at": "2026-10-26T19:06:47Z",
+          "completed_at": "2026-10-26T19:06:47Z"
+        },
+        {
+          "name": "Execute GitHub Copilot CLI",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 29,
+          "started_at": "2026-10-26T19:06:47Z",
+          "completed_at": "2026-10-26T19:08:21Z"
+        },
+        {
+          "name": "Log GitHub rate limits at agent end",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 30,
+          "started_at": "2026-10-26T19:08:21Z",
+          "completed_at": "2026-10-26T19:08:21Z"
+        },
+        {
+          "name": "Detect agent errors",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 31,
+          "started_at": "2026-10-26T19:08:21Z",
+          "completed_at": "2026-10-26T19:08:21Z"
+        },
+        {
+          "name": "Configure Git credentials",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 32,
+          "started_at": "2026-10-26T19:08:21Z",
+          "completed_at": "2026-10-26T19:08:21Z"
+        },
+        {
+          "name": "Copy Copilot session state files to logs",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 33,
+          "started_at": "2026-10-26T19:08:21Z",
+          "completed_at": "2026-10-26T19:08:21Z"
+        },
+        {
+          "name": "Stop MCP Gateway",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 34,
+          "started_at": "2026-10-26T19:08:21Z",
+          "completed_at": "2026-10-26T19:08:23Z"
+        },
+        {
+          "name": "Redact secrets in logs",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 35,
+          "started_at": "2026-10-26T19:08:23Z",
+          "completed_at": "2026-10-26T19:08:23Z"
+        },
+        {
+          "name": "Append agent step summary",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 36,
+          "started_at": "2026-10-26T19:08:23Z",
+          "completed_at": "2026-10-26T19:08:23Z"
+        },
+        {
+          "name": "Copy Safe Outputs",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 37,
+          "started_at": "2026-10-26T19:08:23Z",
+          "completed_at": "2026-10-26T19:08:23Z"
+        },
+        {
+          "name": "Ingest agent output",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 38,
+          "started_at": "2026-10-26T19:08:23Z",
+          "completed_at": "2026-10-26T19:08:23Z"
+        },
+        {
+          "name": "Parse agent logs for step summary",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 39,
+          "started_at": "2026-10-26T19:08:23Z",
+          "completed_at": "2026-10-26T19:08:23Z"
+        },
+        {
+          "name": "Parse MCP Gateway logs for step summary",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 40,
+          "started_at": "2026-10-26T19:08:23Z",
+          "completed_at": "2026-10-26T19:08:24Z"
+        },
+        {
+          "name": "Print firewall logs",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 41,
+          "started_at": "2026-10-26T19:08:24Z",
+          "completed_at": "2026-10-26T19:08:25Z"
+        },
+        {
+          "name": "Parse token usage for step summary",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 42,
+          "started_at": "2026-10-26T19:08:25Z",
+          "completed_at": "2026-10-26T19:08:25Z"
+        },
+        {
+          "name": "Print AWF reflect summary",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 43,
+          "started_at": "2026-10-26T19:08:25Z",
+          "completed_at": "2026-10-26T19:08:25Z"
+        },
+        {
+          "name": "Generate observability summary",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 44,
+          "started_at": "2026-10-26T19:08:25Z",
+          "completed_at": "2026-10-26T19:08:26Z"
+        },
+        {
+          "name": "Write agent output placeholder if missing",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 45,
+          "started_at": "2026-10-26T19:08:26Z",
+          "completed_at": "2026-10-26T19:08:26Z"
+        },
+        {
+          "name": "Upload agent output fallback artifact",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 46,
+          "started_at": "2026-10-26T19:08:26Z",
+          "completed_at": "2026-10-26T19:08:27Z"
+        },
+        {
+          "name": "Upload agent artifacts",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 47,
+          "started_at": "2026-10-26T19:08:27Z",
+          "completed_at": "2026-10-26T19:08:28Z"
+        },
+        {
+          "name": "Post Checkout repository (gh-aw default)",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 93,
+          "started_at": "2026-10-26T19:08:28Z",
+          "completed_at": "2026-10-26T19:08:28Z"
+        },
+        {
+          "name": "Post Setup Scripts",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 94,
+          "started_at": "2026-10-26T19:08:28Z",
+          "completed_at": "2026-10-26T19:08:28Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 95,
+          "started_at": "2026-10-26T19:08:28Z",
+          "completed_at": "2026-10-26T19:08:28Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/ppv-1/rust-sandbox/check-runs/121786201864",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000000350,
+      "runner_name": "GitHub Actions 1000000350",
+      "runner_group_name": "GitHub Actions",
+      "workflow_name": "LLM-policy triage",
+      "head_branch": "golden/160925",
+      "Duration": 139000000000
+    },
+    {
+      "id": 121787462885,
+      "run_id": 40383549199,
+      "run_url": "https://api.github.com/repos/ppv-1/rust-sandbox/actions/runs/40383549199",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVVzeqM8AAAAcWxk05Q",
+      "head_sha": "09d073b1c9140297bd62adeaed6417f2cbd4f1d7",
+      "url": "https://api.github.com/repos/ppv-1/rust-sandbox/actions/jobs/121787462885",
+      "html_url": "https://github.com/ppv-1/rust-sandbox/actions/runs/40383549199/job/121787462885",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-26T19:08:30Z",
+      "started_at": "2026-10-26T19:08:32Z",
+      "completed_at": "2026-10-26T19:10:18Z",
+      "name": "detection",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-26T19:08:33Z",
+          "completed_at": "2026-10-26T19:08:39Z"
+        },
+        {
+          "name": "Setup Scripts",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-26T19:08:39Z",
+          "completed_at": "2026-10-26T19:08:41Z"
+        },
+        {
+          "name": "Download activation artifact",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-26T19:08:41Z",
+          "completed_at": "2026-10-26T19:08:43Z"
+        },
+        {
+          "name": "Download agent output artifact",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-26T19:08:43Z",
+          "completed_at": "2026-10-26T19:08:44Z"
+        },
+        {
+          "name": "Setup agent output environment variable",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-26T19:08:44Z",
+          "completed_at": "2026-10-26T19:08:44Z"
+        },
+        {
+          "name": "Checkout repository for patch context",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 6,
+          "started_at": "2026-10-26T19:08:44Z",
+          "completed_at": "2026-10-26T19:08:44Z"
+        },
+        {
+          "name": "Initialize detection execution evidence",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-26T19:08:44Z",
+          "completed_at": "2026-10-26T19:08:44Z"
+        },
+        {
+          "name": "Clear inherited Copilot session state",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-26T19:08:44Z",
+          "completed_at": "2026-10-26T19:08:44Z"
+        },
+        {
+          "name": "Clean stale firewall files from agent artifact",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-26T19:08:44Z",
+          "completed_at": "2026-10-26T19:08:44Z"
+        },
+        {
+          "name": "Download container images",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-26T19:08:44Z",
+          "completed_at": "2026-10-26T19:09:00Z"
+        },
+        {
+          "name": "Check if detection needed",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-26T19:09:00Z",
+          "completed_at": "2026-10-26T19:09:00Z"
+        },
+        {
+          "name": "Clear MCP Config for detection",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-10-26T19:09:00Z",
+          "completed_at": "2026-10-26T19:09:00Z"
+        },
+        {
+          "name": "Prepare threat detection files",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-26T19:09:00Z",
+          "completed_at": "2026-10-26T19:09:00Z"
+        },
+        {
+          "name": "Setup threat detection",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-10-26T19:09:00Z",
+          "completed_at": "2026-10-26T19:09:00Z"
+        },
+        {
+          "name": "Ensure threat-detection directory and log",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-10-26T19:09:00Z",
+          "completed_at": "2026-10-26T19:09:00Z"
+        },
+        {
+          "name": "Install AWF binary",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-10-26T19:09:00Z",
+          "completed_at": "2026-10-26T19:09:01Z"
+        },
+        {
+          "name": "Setup Node.js",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-10-26T19:09:01Z",
+          "completed_at": "2026-10-26T19:09:01Z"
+        },
+        {
+          "name": "Install GitHub Copilot CLI",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 18,
+          "started_at": "2026-10-26T19:09:01Z",
+          "completed_at": "2026-10-26T19:09:04Z"
+        },
+        {
+          "name": "Install threat-detect binary",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 19,
+          "started_at": "2026-10-26T19:09:04Z",
+          "completed_at": "2026-10-26T19:09:04Z"
+        },
+        {
+          "name": "Execute threat detection with AWF",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 20,
+          "started_at": "2026-10-26T19:09:04Z",
+          "completed_at": "2026-10-26T19:10:12Z"
+        },
+        {
+          "name": "Copy detection firewall logs",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 21,
+          "started_at": "2026-10-26T19:10:12Z",
+          "completed_at": "2026-10-26T19:10:12Z"
+        },
+        {
+          "name": "Redact secrets in detection logs",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 22,
+          "started_at": "2026-10-26T19:10:12Z",
+          "completed_at": "2026-10-26T19:10:12Z"
+        },
+        {
+          "name": "Parse threat detection token usage for step summary",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 23,
+          "started_at": "2026-10-26T19:10:12Z",
+          "completed_at": "2026-10-26T19:10:13Z"
+        },
+        {
+          "name": "Redact secrets in detection artifacts",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 24,
+          "started_at": "2026-10-26T19:10:13Z",
+          "completed_at": "2026-10-26T19:10:13Z"
+        },
+        {
+          "name": "Render detection log",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 25,
+          "started_at": "2026-10-26T19:10:13Z",
+          "completed_at": "2026-10-26T19:10:13Z"
+        },
+        {
+          "name": "Upload threat detection artifact",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 26,
+          "started_at": "2026-10-26T19:10:13Z",
+          "completed_at": "2026-10-26T19:10:15Z"
+        },
+        {
+          "name": "Conclude threat detection",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 27,
+          "started_at": "2026-10-26T19:10:15Z",
+          "completed_at": "2026-10-26T19:10:15Z"
+        },
+        {
+          "name": "Upload skipped detection execution evidence",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 28,
+          "started_at": "2026-10-26T19:10:15Z",
+          "completed_at": "2026-10-26T19:10:15Z"
+        },
+        {
+          "name": "Post Setup Node.js",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 55,
+          "started_at": "2026-10-26T19:10:15Z",
+          "completed_at": "2026-10-26T19:10:15Z"
+        },
+        {
+          "name": "Post Setup Scripts",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 56,
+          "started_at": "2026-10-26T19:10:15Z",
+          "completed_at": "2026-10-26T19:10:15Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 57,
+          "started_at": "2026-10-26T19:10:15Z",
+          "completed_at": "2026-10-26T19:10:15Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/ppv-1/rust-sandbox/check-runs/121787462885",
+      "labels": [
+        "ubuntu-latest"
+      ],
+      "runner_id": 1000000351,
+      "runner_name": "GitHub Actions 1000000351",
+      "runner_group_name": "GitHub Actions",
+      "workflow_name": "LLM-policy triage",
+      "head_branch": "golden/160925",
+      "Duration": 106000000000
+    },
+    {
+      "id": 121788448729,
+      "run_id": 40383549199,
+      "run_url": "https://api.github.com/repos/ppv-1/rust-sandbox/actions/runs/40383549199",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVVzeqM8AAAAcWyg_2Q",
+      "head_sha": "09d073b1c9140297bd62adeaed6417f2cbd4f1d7",
+      "url": "https://api.github.com/repos/ppv-1/rust-sandbox/actions/jobs/121788448729",
+      "html_url": "https://github.com/ppv-1/rust-sandbox/actions/runs/40383549199/job/121788448729",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-26T19:10:19Z",
+      "started_at": "2026-10-26T19:10:27Z",
+      "completed_at": "2026-10-26T19:10:52Z",
+      "name": "safe_outputs",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-26T19:10:29Z",
+          "completed_at": "2026-10-26T19:10:32Z"
+        },
+        {
+          "name": "Setup Scripts",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-26T19:10:33Z",
+          "completed_at": "2026-10-26T19:10:40Z"
+        },
+        {
+          "name": "Mask OTLP telemetry headers",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-26T19:10:40Z",
+          "completed_at": "2026-10-26T19:10:40Z"
+        },
+        {
+          "name": "Download agent output artifact",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-26T19:10:40Z",
+          "completed_at": "2026-10-26T19:10:42Z"
+        },
+        {
+          "name": "Setup agent output environment variable",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-26T19:10:42Z",
+          "completed_at": "2026-10-26T19:10:42Z"
+        },
+        {
+          "name": "Configure GH_HOST for enterprise compatibility",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6,
+          "started_at": "2026-10-26T19:10:42Z",
+          "completed_at": "2026-10-26T19:10:42Z"
+        },
+        {
+          "name": "Process Safe Outputs",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-26T19:10:42Z",
+          "completed_at": "2026-10-26T19:10:47Z"
+        },
+        {
+          "name": "Upload Safe Outputs Items",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-26T19:10:47Z",
+          "completed_at": "2026-10-26T19:10:49Z"
+        },
+        {
+          "name": "Post Setup Scripts",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-10-26T19:10:49Z",
+          "completed_at": "2026-10-26T19:10:50Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-10-26T19:10:50Z",
+          "completed_at": "2026-10-26T19:10:50Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/ppv-1/rust-sandbox/check-runs/121788448729",
+      "labels": [
+        "ubuntu-slim"
+      ],
+      "runner_id": 1000000352,
+      "runner_name": "GitHub Actions 1000000352",
+      "runner_group_name": "GitHub Actions",
+      "workflow_name": "LLM-policy triage",
+      "head_branch": "golden/160925",
+      "Duration": 25000000000
+    },
+    {
+      "id": 121788744895,
+      "run_id": 40383549199,
+      "run_url": "https://api.github.com/repos/ppv-1/rust-sandbox/actions/runs/40383549199",
+      "run_attempt": 1,
+      "node_id": "CR_kwDOVVzeqM8AAAAcWyzEvw",
+      "head_sha": "09d073b1c9140297bd62adeaed6417f2cbd4f1d7",
+      "url": "https://api.github.com/repos/ppv-1/rust-sandbox/actions/jobs/121788744895",
+      "html_url": "https://github.com/ppv-1/rust-sandbox/actions/runs/40383549199/job/121788744895",
+      "status": "completed",
+      "conclusion": "success",
+      "created_at": "2026-10-26T19:10:52Z",
+      "started_at": "2026-10-26T19:10:55Z",
+      "completed_at": "2026-10-26T19:11:13Z",
+      "name": "conclusion",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-26T19:10:57Z",
+          "completed_at": "2026-10-26T19:10:59Z"
+        },
+        {
+          "name": "Setup Scripts",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-26T19:10:59Z",
+          "completed_at": "2026-10-26T19:11:04Z"
+        },
+        {
+          "name": "Download agent output artifact",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-26T19:11:04Z",
+          "completed_at": "2026-10-26T19:11:05Z"
+        },
+        {
+          "name": "Setup agent output environment variable",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-26T19:11:05Z",
+          "completed_at": "2026-10-26T19:11:05Z"
+        },
+        {
+          "name": "Restore runtime model metadata",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5,
+          "started_at": "2026-10-26T19:11:05Z",
+          "completed_at": "2026-10-26T19:11:05Z"
+        },
+        {
+          "name": "Warn if threat detection produced no verdict",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 6,
+          "started_at": "2026-10-26T19:11:05Z",
+          "completed_at": "2026-10-26T19:11:05Z"
+        },
+        {
+          "name": "Download detection artifact",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-26T19:11:05Z",
+          "completed_at": "2026-10-26T19:11:05Z"
+        },
+        {
+          "name": "Download Safe Outputs Items Manifest",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-26T19:11:05Z",
+          "completed_at": "2026-10-26T19:11:06Z"
+        },
+        {
+          "name": "Process no-op messages",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-26T19:11:06Z",
+          "completed_at": "2026-10-26T19:11:06Z"
+        },
+        {
+          "name": "Log detection run",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10,
+          "started_at": "2026-10-26T19:11:06Z",
+          "completed_at": "2026-10-26T19:11:07Z"
+        },
+        {
+          "name": "Record missing tool",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11,
+          "started_at": "2026-10-26T19:11:07Z",
+          "completed_at": "2026-10-26T19:11:07Z"
+        },
+        {
+          "name": "Record incomplete",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12,
+          "started_at": "2026-10-26T19:11:07Z",
+          "completed_at": "2026-10-26T19:11:07Z"
+        },
+        {
+          "name": "Handle agent failure",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13,
+          "started_at": "2026-10-26T19:11:07Z",
+          "completed_at": "2026-10-26T19:11:08Z"
+        },
+        {
+          "name": "Report failed jobs",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 14,
+          "started_at": "2026-10-26T19:11:08Z",
+          "completed_at": "2026-10-26T19:11:08Z"
+        },
+        {
+          "name": "Collect usage artifact files",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15,
+          "started_at": "2026-10-26T19:11:08Z",
+          "completed_at": "2026-10-26T19:11:08Z"
+        },
+        {
+          "name": "Generate usage activity summary and unified session",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16,
+          "started_at": "2026-10-26T19:11:08Z",
+          "completed_at": "2026-10-26T19:11:10Z"
+        },
+        {
+          "name": "Upload usage artifact",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17,
+          "started_at": "2026-10-26T19:11:10Z",
+          "completed_at": "2026-10-26T19:11:11Z"
+        },
+        {
+          "name": "Wait before retrying usage artifact upload",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 18,
+          "started_at": "2026-10-26T19:11:11Z",
+          "completed_at": "2026-10-26T19:11:11Z"
+        },
+        {
+          "name": "Retry upload usage artifact",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 19,
+          "started_at": "2026-10-26T19:11:11Z",
+          "completed_at": "2026-10-26T19:11:11Z"
+        },
+        {
+          "name": "Post Setup Scripts",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 38,
+          "started_at": "2026-10-26T19:11:11Z",
+          "completed_at": "2026-10-26T19:11:11Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 39,
+          "started_at": "2026-10-26T19:11:11Z",
+          "completed_at": "2026-10-26T19:11:11Z"
+        }
+      ],
+      "check_run_url": "https://api.github.com/repos/ppv-1/rust-sandbox/check-runs/121788744895",
+      "labels": [
+        "ubuntu-slim"
+      ],
+      "runner_id": 1000000353,
+      "runner_name": "GitHub Actions 1000000353",
+      "runner_group_name": "GitHub Actions",
+      "workflow_name": "LLM-policy triage",
+      "head_branch": "golden/160925",
+      "Duration": 18000000000
+    }
+  ],
+  "safe_outputs": [
+    {
+      "type": "add_labels",
+      "number": 28,
+      "repo": "ppv-1/rust-sandbox",
+      "provider": "github",
+      "target": {
+        "kind": "pull request",
+        "number": 28,
+        "provider": "github",
+        "repository": "ppv-1/rust-sandbox"
+      },
+      "labels": [
+        {
+          "name": "llm-assisted",
+          "database_id": 12832536851,
+          "node_id": "LA_kwDOVVzeqM8AAAAC_OD5Ew"
+        }
+      ],
+      "labelsAdded": [
+        "llm-assisted"
+      ],
+      "before_state": {
+        "assignees": [],
+        "body_hash": "e63f04585af1563eea18067871036eedc503702fd3e24d1a23b0ca914a15a824",
+        "labels": [],
+        "state": "open",
+        "title": "Add `TypeId::is_signed` method"
+      },
+      "after_state": {
+        "assignees": [],
+        "body_hash": "e63f04585af1563eea18067871036eedc503702fd3e24d1a23b0ca914a15a824",
+        "labels": [
+          "llm-assisted"
+        ],
+        "state": "open",
+        "title": "Add `TypeId::is_signed` method"
+      },
+      "timestamp": "2026-10-26T19:10:45.617Z"
+    },
+    {
+      "type": "add_comment",
+      "url": "https://github.com/ppv-1/rust-sandbox/pull/28#issuecomment-6424995722",
+      "number": 28,
+      "repo": "ppv-1/rust-sandbox",
+      "provider": "github",
+      "id": 6424995722,
+      "target": {
+        "number": 28,
+        "provider": "github",
+        "repository": "ppv-1/rust-sandbox"
+      },
+      "timestamp": "2026-10-26T19:10:47.434Z"
+    }
+  ],
+  "artifacts_list": [
+    ".downloaded-artifacts\\usage",
+    "aw_info.json",
+    "usage\\activity\\summary.json",
+    "usage\\agent\\execution.json",
+    "usage\\agent\\token_usage.jsonl",
+    "usage\\agent_usage.json",
+    "usage\\aw_info.json",
+    "usage\\aw_session.jsonl",
+    "usage\\detection\\execution.json",
+    "usage\\detection\\token_usage.jsonl",
+    "usage\\github_rate_limits.jsonl",
+    "usage\\graders\\grader_manifest.json",
+    "usage\\graders\\grader_results.json"
+  ]
+}
